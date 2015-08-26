@@ -1,0 +1,4 @@
+<div class="nested-fields well">
+    <%= f.collection_select :operacion_id, Operacion.all, :id, :nombre, prompt: 'Seleccione Operacio' %>
+    <%= link_to_remove_association "Eliminar Operacion", f %>
+</div>

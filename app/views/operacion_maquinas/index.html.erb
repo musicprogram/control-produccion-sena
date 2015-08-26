@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Operaciones</h1>
+
+<%= form_tag fichatecnica_operacion_maquinas_path, :method => 'get' do %>
+     <% content_tag :label do %>
+         Search term:
+         <%= text_field_tag :search, params[:search] %>
+         <%= submit_tag "Buscar", @operacion_maquina_tioperacion_nombre => nil %>
+     <% end %>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Num</th>
+      <th>Operacion</th>
+      <th>Tioperacion</th>
+      <th>Maquina</th>
+      <th>Sam</th>
+      <th>Calibreaguja</th>
+      <th>Ppp</th>
+      <th>Margencostura</th>
+      <th>Hilo</th>
+      <th>Guia acesorios</th>
+      <th>Observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operacion_maquinas.each do |operacion_maquina| %>
+      <tr>
+        <td><%= operacion_maquina.num %></td>
+        <td><%= operacion_maquina.operacion.nombre rescue nil%></td>
+        <td><%= operacion_maquina.tioperacion.nombre rescue nil %></td>
+        <td><%= operacion_maquina.maquina.nombre rescue nil%></td>
+        <td><%= operacion_maquina.sam %></td>
+        <td><%= operacion_maquina.calibreaguja %></td>
+        <td><%= operacion_maquina.ppp %></td>
+        <td><%= operacion_maquina.margencostura %></td>
+        <td><%= operacion_maquina.hilo %></td>
+        <td><%= operacion_maquina.guia_acesorios %></td>
+        <td><%= operacion_maquina.observaciones %></td>
+        <td><%= link_to 'Edit', edit_fichatecnica_operacion_maquina_path(@fichatecnica,operacion_maquina) %></td>
+        <td><%= link_to 'Destroy', fichatecnica_operacion_maquina_path(@fichatecnica,operacion_maquina), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operacion', new_fichatecnica_operacion_maquina_path(@fichatecnica) %>
+
+<%= will_paginate @operacion_maquinas, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;' %>
+<br>
+Operaciones: <%= @operacion_maquinas.count %>
+
+<%= link_to 'Back', reference_fichatecnicas_path(@fichatecnica) %>

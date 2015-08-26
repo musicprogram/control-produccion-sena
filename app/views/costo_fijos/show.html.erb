@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+<p>
+  <strong>Arrendamiento:</strong>
+  <%= number_to_currency(@costo_fijo.arrendamiento, precision: 3) %>
+</p>
+
+<p>
+  <strong>Servicios publicos:</strong>
+  <%= number_to_currency(@costo_fijo.servicios_publicos, precision: 3) %>
+</p>
+
+<p>
+  <strong>Nomina:</strong>
+  <%= number_to_currency(@costo_fijo.nomina, precision: 3) %>
+</p>
+
+<p>
+  <strong>Prestaciones:</strong>
+  <%= number_to_currency(@costo_fijo.prestaciones, precision: 3) %>
+</p>
+
+<p>
+  <strong>Otros gastos:</strong>
+  <%= number_to_currency(@costo_fijo.otros_gastos, precision: 3) %>
+</p>
+
+<p>
+  <strong>Papeleria:</strong>
+  <%= number_to_currency(@costo_fijo.papeleria, precision: 3) %>
+</p>
+
+<p>
+  <strong>Honorarios:</strong>
+  <%= number_to_currency(@costo_fijo.honorarios, precision: 3) %>
+</p>
+
+<p>
+  <strong>Gastos mercadeo:</strong>
+  <%= number_to_currency(@costo_fijo.gastos_mercadeo, precision: 3) %>
+</p>
+
+<p>
+  <strong>Impuestos municipales:</strong>
+  <%= number_to_currency(@costo_fijo.impuestos_municipales, precision: 3) %>
+</p>
+
+<p>
+  <strong>Otros:</strong>
+  <%= number_to_currency(@costo_fijo.otros, precision: 3) %>
+</p>
+
+<p>
+  <strong>Total costos:</strong>
+  <%= number_to_currency(@costo_fijo.total_costos, precision: 3)%>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_costo_fijo_path(@costo_fijo) %> |
+<%= link_to 'Back', costo_fijos_path %>

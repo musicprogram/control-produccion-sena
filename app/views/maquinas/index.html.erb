@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Maquinas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>serial</th>
+      <th>Nombre</th>
+      <th>Modulo</th>
+      <th>Estadom</th>
+      <th>Especificaciones Generales</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maquinas.each do |maquina| %>
+      <tr>
+        <td><%= maquina.serial %></td>
+        <td><%= maquina.nombre %></td>
+        <td><%= maquina.modulo.nombre rescue nil %></td>
+        <td><%= maquina.estadom.titulo rescue nil%></td>
+        <td><%= link_to('<button class="btn btn-success"><small> Ver </small></button>'.html_safe, maquina.especificaciones.url) %></td>
+        <td><%= link_to 'Show', maquina %></td>
+        <td><%= link_to 'Edit', edit_maquina_path(maquina) %></td>
+        <td><%= link_to 'Destroy', maquina, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Maquina', new_maquina_path %>

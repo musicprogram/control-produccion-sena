@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cesantias:</strong>
+  <%= @prestacion.cesantias %> 
+</p>
+
+<p>
+  <strong>Cesantias porcentaje:</strong>
+  <%= @prestacion.cesantias_porcentaje.round(2) %>
+</p>
+
+<p>
+  <strong>Prima:</strong>
+  <%= number_to_currency(@prestacion.prima, precision: 3) %>
+</p>
+
+<p>
+  <strong>Prima procentaje:</strong>
+  <%= @prestacion.prima_procentaje.round(2) %>
+</p>
+
+<p>
+  <strong>Vacaciones:</strong>
+  <%= number_to_currency(@prestacion.vacaciones, precision: 3) %>
+</p>
+
+<p>
+  <strong>Vacaciones porcentaje:</strong>
+  <%= @prestacion.vacaciones_porcentaje.round(2) %>
+</p>
+
+<p>
+  <strong>Intereses cesantias:</strong>
+  <%= number_to_currency(@prestacion.intereses_cesantias, precision: 3) %>
+</p>
+
+<p>
+  <strong>Intereses porcenjate:</strong>
+  <%= @prestacion.intereses_porcenjate.round(2) %>
+</p>
+
+<p>
+  <strong>Total prestacion:</strong>
+  <%= number_to_currency(@prestacion.total_prestacion, precision: 3) %>
+</p>
+
+<p>
+  <strong>Total porcentaje:</strong>
+  <%= @prestacion.total_porcentaje.round(2) %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_prestacion_path(@prestacion) %> |
+<%= link_to 'Back', prestaciones_path %>

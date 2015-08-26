@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  documento_id: 
+  numdocumento: MyString
+  nombre: MyString
+  apellidos: MyString
+  email: MyString
+  modulo_id: 
+
+two:
+  documento_id: 
+  numdocumento: MyString
+  nombre: MyString
+  apellidos: MyString
+  email: MyString
+  modulo_id: 

@@ -1,0 +1,1 @@
+json.extract! @prestacion, :id, :cesantias, :cesantias_porcentaje, :prima, :prima_procentaje, :vacaciones, :vacaciones_porcentaje, :intereses_cesantias, :intereses_porcenjate, :total_prestacion, :total_porcentaje, :sueldo_id, :created_at, :updated_at

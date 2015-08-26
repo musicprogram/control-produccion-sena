@@ -1,0 +1,2 @@
+module DlaboralsHelper
+end

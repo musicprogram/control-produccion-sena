@@ -1,0 +1,104 @@
+
+
+
+
+<div class="container">
+  <row>
+    <%= form_for(@operacion) do |f| %>
+  <% if @operacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@operacion.errors.count, "error") %> prohibited this operacion from being saved:</h2>
+
+      <ul>
+      <% @operacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  
+  
+  <div class="col-md-12">
+    
+    <div class="col-md-4">
+        
+        
+    </div>
+    
+    <div class="col-md-4">
+           
+
+  <div class="field">
+    <%= f.label :nombre  %><br>
+    <%= f.text_field :nombre, class:'form-control' %>
+  </div>   
+
+    </div>
+    
+</div>
+
+  <div class="col-md-12">
+    
+    <div class="col-md-4">
+        
+        
+    </div>
+    
+    <div class="col-md-4">
+           
+
+</div>
+
+
+  <div class="col-md-12">
+    
+    <div class="col-md-4">
+        
+        
+    </div>
+    
+    <div class="col-md-4">
+           
+
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion, class:'form-control' %>
+  </div>
+    </div>
+    
+    
+</div>
+
+    </div>
+  
+      <div class="col-md-12">
+    
+    <div class="col-md-4">
+        
+        
+    </div>
+    
+    <div class="col-md-4">
+           
+
+
+  
+  <div class="actions">
+    <%= f.submit "Guardar", class:'btn btn-default btn-lg btn-block'%>
+  </div>
+  
+
+    </div>
+    
+</div>
+  
+
+ 
+  
+  
+<% end %>
+  </row>
+</div>
+  

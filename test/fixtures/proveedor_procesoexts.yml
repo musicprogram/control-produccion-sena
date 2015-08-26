@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proveedor_id: 
+  procesoext_id: 
+  descripcion: MyText
+  observaciones: MyText
+  precio: MyString
+
+two:
+  proveedor_id: 
+  procesoext_id: 
+  descripcion: MyText
+  observaciones: MyText
+  precio: MyString

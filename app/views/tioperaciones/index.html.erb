@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tioperaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tioperaciones.each do |tioperacion| %>
+      <tr>
+        <td><%= tioperacion.nombre %></td>
+        <td><%= link_to 'Show', tioperacion %></td>
+        <td><%= link_to 'Edit', edit_tioperacion_path(tioperacion) %></td>
+        <td><%= link_to 'Destroy', tioperacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tioperacion', new_tioperacion_path %>

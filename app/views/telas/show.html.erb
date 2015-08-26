@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tela.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tela.descripcion %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @tela.observaciones %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_tela_path(@tela) %> |
+<%= link_to 'Back', telas_path %>

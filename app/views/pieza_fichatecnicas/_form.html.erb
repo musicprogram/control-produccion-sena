@@ -1,0 +1,18 @@
+<%= simple_form_for [@reference,@fichatecnica,@pieza_fichatecnica] do |f| %>
+  <%= f.error_notification %>
+
+<div class="form-actions">
+  <%= f.label :pieza %><br>
+  <%= f.collection_select :pieza_id, Pieza.all, :id, :nombre, prompt: "Seleccione Una Pieza" %>
+</div>
+  <div class="form-inputs">
+    <%= f.input :cantidad %>
+    <%= f.input :observaciones %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'cancelar', 
+    fichatecnica_pieza_fichatecnicas_path(@fichatecnica), :class => 'btn btn-default' %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arrendamiento: 1.5
+  servicios_publicos: 1.5
+  nomina: 1.5
+  prestaciones: 1.5
+  otros_gastos: 1.5
+  papeleria: 1.5
+  honorarios: 1.5
+  gastos_mercadeo: 1.5
+  impuestos_municipales: 1.5
+  otros: 1.5
+  total_costos: 1.5
+
+two:
+  arrendamiento: 1.5
+  servicios_publicos: 1.5
+  nomina: 1.5
+  prestaciones: 1.5
+  otros_gastos: 1.5
+  papeleria: 1.5
+  honorarios: 1.5
+  gastos_mercadeo: 1.5
+  impuestos_municipales: 1.5
+  otros: 1.5
+  total_costos: 1.5

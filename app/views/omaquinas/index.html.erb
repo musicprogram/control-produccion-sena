@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Omaquinas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moperario</th>
+      <th>Maquina</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @omaquinas.each do |omaquina| %>
+      <tr>
+        <td><%= omaquina.moperario %></td>
+        <td><%= omaquina.maquina %></td>
+        <td><%= link_to 'Show', omaquina %></td>
+        <td><%= link_to 'Edit', edit_omaquina_path(omaquina) %></td>
+        <td><%= link_to 'Destroy', omaquina, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Omaquina', new_omaquina_path %>

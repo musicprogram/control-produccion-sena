@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @fichatecnica.descripcion %>
+</p>
+
+<p>
+  <strong>Tallapromedio:</strong>
+  <%= @fichatecnica.tallapromedio %>
+</p>
+
+<p>
+  <strong>Modulo:</strong>
+  <%= @fichatecnica.modulo %>
+</p>
+
+<p>
+  <strong>Talla:</strong>
+  <%= @fichatecnica.talla %>
+</p>
+
+<p>
+  <strong>Tela:</strong>
+  <%= @fichatecnica.tela %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @fichatecnica.color %>
+</p>
+
+<p>
+  <strong>Especificacion:</strong>
+  <%= @fichatecnica.especificacion %>
+</p>
+
+<p>
+  <strong>Estandar:</strong>
+  <%= @fichatecnica.estandar %>
+</p>
+
+<p>
+  <strong>Procesoext:</strong>
+  <%= @fichatecnica.procesoext %>
+</p>
+
+<p>
+  <strong>Pieza:</strong>
+  <%= @fichatecnica.pieza %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @fichatecnica.reference %>
+</p>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              fichatecnica_path(fichatecnica)  %>

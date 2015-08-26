@@ -1,0 +1,25 @@
+<%= simple_form_for(@dlaboral) do |f| %>
+  <% if @dlaboral.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dlaboral.errors.count, "error") %> prohibited this breakeven from being saved:</h2>
+
+      <ul>
+      <% @dlaboral.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-inputs">
+    <%= f.input :dias_año %>
+    <%= f.input :domingos %>
+    <%= f.input :festivos %>
+    <%= f.input :vacaciones %>
+    <%# f.input :total_dias %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

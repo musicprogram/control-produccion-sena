@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Proyecto:</strong>
+  <%= @pmodulo.proyecto %>
+</p>
+
+<p>
+  <strong>Modulo:</strong>
+  <%= @pmodulo.modulo %>
+</p>
+
+<%= link_to 'Edit', edit_pmodulo_path(@pmodulo) %> |
+<%= link_to 'Back', pmodulos_path %>

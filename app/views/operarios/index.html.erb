@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Operarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      
+      <th>Tipo de Documento</th>
+      <th>Documento</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Grupo</th>
+      <th>Ayuda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operarios.each do |operario| %>
+      <tr>
+        <td><%= operario.documento.nombre rescue nil %></td>
+        <td><%= operario.numdocumento %></td>
+        <td><%= operario.nombre %></td>
+        <td><%= operario.apellido %></td>
+        <td><%= operario.email %></td>
+        <td><%= operario.grupo.nombre rescue nil %></td>
+        <td><%= operario.ayuda %></td>
+        <td><%= link_to 'Show', operario %></td>
+        <td><%= link_to 'Edit', edit_operario_path(operario) %></td>
+        <td><%= link_to 'Destroy', operario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operario', new_operario_path %>

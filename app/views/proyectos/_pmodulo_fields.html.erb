@@ -1,0 +1,18 @@
+<div class="nested-fields well">
+    <%= f.collection_select :modulo_id, Modulo.all, :id, :nombre, {prompt: "Seleccione Modulo"}, {class: "form-control"}  %>
+
+    <%= link_to_remove_association 'borrar Modulo', f %>
+    
+    
+      <div class="container">
+    
+      <%= f.fields_for :mmaquinas do |maquina| %>
+          <%= render 'mmaquina_fields', f: maquina %>
+            
+      <% end %>  
+          <%= link_to_add_association 'Agregar Maquina', f, :mmaquinas %>
+  
+      </div>
+
+    
+</div>  

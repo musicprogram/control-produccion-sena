@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Procesoexts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ficha Tecnica</th>
+      <th>Proveedor</th>
+      <th>Procesoext</th>
+      <th>Descripcion</th>
+      <th>Observaciones</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proveedor_procesoexts.each do |proveedor_procesoext| %>
+      <tr>
+        <td><%= proveedor_procesoext.fichatecnica.reference.ref rescue nil %></td>
+        <td><%= proveedor_procesoext.proveedor.nombre %></td>
+        <td><%= proveedor_procesoext.procesoext.nombre %></td>
+        <td><%= proveedor_procesoext.descripcion %></td>
+        <td><%= proveedor_procesoext.observaciones %></td>
+        <td><%= proveedor_procesoext.precio %></td>
+        <td><%= link_to 'Edit', edit_fichatecnica_proveedor_procesoext_path(@fichatecnica,proveedor_procesoext) %></td>
+        <td><%= link_to 'Destroy', fichatecnica_proveedor_procesoext_path(@fichatecnica,proveedor_procesoext), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New procesoext', new_fichatecnica_proveedor_procesoext_path(@fichatecnica) %>
+<%= link_to 'Back', reference_fichatecnicas_path(@fichatecnica) %>

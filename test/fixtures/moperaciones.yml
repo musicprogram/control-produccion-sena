@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  omaquina_id: 
+  operacion_id: 
+
+two:
+  omaquina_id: 
+  operacion_id: 

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Estados de las Maquinas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estadoms.each do |estadom| %>
+      <tr>
+        <td><%= estadom.titulo %></td>
+        <td><%= estadom.descripcion %></td>
+        <td><%= link_to 'Show', estadom %></td>
+        <td><%= link_to 'Edit', edit_estadom_path(estadom) %></td>
+        <td><%= link_to 'Destroy', estadom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Estadom', new_estadom_path %>

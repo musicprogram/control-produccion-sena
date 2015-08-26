@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @insumo_fichatecnica.insumo %>
+</p>
+
+<p>
+  <strong>Fichatecnica:</strong>
+  <%= @insumo_fichatecnica.fichatecnica %>
+</p>
+
+<p>
+  <strong>Tipo Medida</strong>
+  <%= @insumo_fichatecnica.unidade.tipo rescue nil %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @insumo_fichatecnica.cantidad %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @insumo_fichatecnica.observaciones %>
+</p>
+
+<%= link_to 'Edit', edit_insumo_fichatecnica_path(@insumo_fichatecnica) %> |
+<%= link_to 'Back', insumo_fichatecnicas_path %>

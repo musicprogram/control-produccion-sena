@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Especificacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @especificacions.each do |especificacion| %>
+      <tr>
+        <td><%= especificacion.descripcion %></td>
+        <td><%= link_to 'Show', especificacion %></td>
+        <td><%= link_to 'Edit', edit_especificacion_path(especificacion) %></td>
+        <td><%= link_to 'Destroy', especificacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Especificacion', new_especificacion_path %>

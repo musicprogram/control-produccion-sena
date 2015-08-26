@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @instructor.documento.nombre rescue nil %>
+</p>
+
+<p>
+  <strong>Numdocumento:</strong>
+  <%= @instructor.numdocumento %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @instructor.nombre %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @instructor.apellidos %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @instructor.email %>
+</p>
+
+<p>
+  <strong>Modulo:</strong>
+  <%= @instructor.modulo.nombre rescue nil %>
+</p>
+
+<%= link_to 'Edit', edit_instructor_path(@instructor) %> |
+<%= link_to 'Back', instructors_path %>

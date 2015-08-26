@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  moperario_id: 
+  maquina_id: 
+
+two:
+  moperario_id: 
+  maquina_id: 

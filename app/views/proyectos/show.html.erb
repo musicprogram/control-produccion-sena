@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @proyecto.nombre %>
+</p>
+
+<ol>
+  <b>Turnos</b>
+  <% for pturno in @proyecto.pturnos %>
+    <li><%= h mostrarTurno(pturno.turno_id) %></li>
+    <ol>
+      <b>Instructores</b>
+      <% for tinstructor in pturno.tinstructors %>
+        <li><%= h mostrarInstructor(tinstructor.instructor_id)%></li>
+        <ul>
+          <b>Modulos</b>
+          <% for imodulo in tinstructor.imodulos %>
+            <li><%= h mostrarModulo(imodulo.modulo_id) %></li>
+            <ul>
+              <b>Operarios</b>
+              <% for moperario in imodulo.moperarios %>
+                <li><%= h mostrarOperario(moperario.operario_id) %></li>
+                <ul>
+                  <b>Maquinas</b>
+                  <% for omaquina in moperario.omaquinas %>
+                    <li><%= h mostrarMaquina(omaquina.maquina_id) %></li>
+                    <ul>
+                      <b>Operaciones</b>
+                      <% for moperacion in omaquina.moperaciones %>
+                        <li><%= h mostrarOperacion(moperacion.operacion_id) %></li>
+                      <% end %>
+                    </ul>
+                  <% end %>
+                </ul>
+              <% end %>  
+            </ul>
+          <% end %>  
+       </ul>
+      <% end %>  
+    </ol>
+  <% end %>
+</ol>
+
+<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
+<%= link_to 'Back', proyectos_path %>

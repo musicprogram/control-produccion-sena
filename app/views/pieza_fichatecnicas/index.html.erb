@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pieza </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pieza</th>
+      <th>Fichatecnica</th>
+      <th>Cantidad</th>
+      <th>Observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pieza_fichatecnicas.each do |pieza_fichatecnica| %>
+      <tr>
+        <td><%= pieza_fichatecnica.pieza.nombre rescue nil %></td>
+        <td><%= pieza_fichatecnica.fichatecnica.reference.ref %></td>
+        <td><%= pieza_fichatecnica.cantidad %></td>
+        <td><%= pieza_fichatecnica.observaciones %></td>
+        <td><%= link_to 'Edit', edit_fichatecnica_pieza_fichatecnica_path(@fichatecnica,pieza_fichatecnica) %></td>
+        <td><%= link_to 'Destroy', fichatecnica_pieza_fichatecnica_path(@fichatecnica,pieza_fichatecnica), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pieza', new_fichatecnica_pieza_fichatecnica_path(@fichatecnica) %>
+<%= link_to 'Back', reference_fichatecnicas_path(@fichatecnica) %>
+

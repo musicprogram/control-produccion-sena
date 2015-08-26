@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dias_año: 1
+  domingos: 1
+  festivos: 1
+  vacaciones: 1
+  total_dias: 1
+
+two:
+  dias_año: 1
+  domingos: 1
+  festivos: 1
+  vacaciones: 1
+  total_dias: 1

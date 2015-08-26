@@ -1,0 +1,22 @@
+<%= simple_form_for [@reference,@fichatecnica,@medida_talla] do |f| %>
+  <%= f.error_notification %>
+   
+   <div class="field">
+    <%= f.label :talla %><br>
+    <%= f.collection_select :talla_id, Talla.all, :id, :titulo, prompt: "Seleccione Una Talla" %>
+  </div>
+  
+    <div class="field">
+    <%= f.label :medida %><br>
+    <%= f.collection_select :medida_id, Medida.all, :id, :medida, prompt: "Seleccione Una medida" %>
+ </div>
+   <div class="form-inputs">
+    <%= f.input :centimetros %>
+    <%= f.input :tolerancia %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'cancelar', 
+    fichatecnica_medida_tallas_path(@fichatecnica), :class => 'btn btn-default' %>
+  </div>
+<% end %>

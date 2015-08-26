@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Costo Fijos</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Arrendamiento</th>
+      <th>Servicios publicos</th>
+      <th>Nomina</th>
+      <th>Prestaciones</th>
+      <th>Otros gastos</th>
+      <th>Papeleria</th>
+      <th>Honorarios</th>
+      <th>Gastos mercadeo</th>
+      <th>Impuestos municipales</th>
+      <th>Otros</th>
+      <th>Total costos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @costo_fijos.each do |costo_fijo| %>
+      <tr>
+        <td><%=  number_to_currency(costo_fijo.arrendamiento, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.servicios_publicos, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.nomina, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.prestaciones, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.otros_gastos, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.papeleria, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.honorarios, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.gastos_mercadeo, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.impuestos_municipales, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.otros, precision: 3) %></td>
+        <td><%=  number_to_currency(costo_fijo.total_costos, precision: 3) %></td>
+        <td><%= link_to 'Show', costo_fijo %></td>
+        <td><%= link_to 'Edit', edit_costo_fijo_path(costo_fijo) %></td>
+        <td><%= link_to 'Destroy', costo_fijo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Costo fijo', new_costo_fijo_path %>

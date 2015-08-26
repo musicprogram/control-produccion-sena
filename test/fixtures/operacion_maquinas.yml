@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  operacion_id: 
+  maquina_id: 
+  tioperacion_id: 
+  fichatecnica_id: 
+  sam: 1
+  calibreaguja: MyString
+  ppp: MyString
+  margencostura: MyString
+  guia_acesorios: MyString
+  observaciones: MyText
+
+two:
+  operacion_id: 
+  maquina_id: 
+  tioperacion_id: 
+  fichatecnica_id: 
+  sam: 1
+  calibreaguja: MyString
+  ppp: MyString
+  margencostura: MyString
+  guia_acesorios: MyString
+  observaciones: MyText

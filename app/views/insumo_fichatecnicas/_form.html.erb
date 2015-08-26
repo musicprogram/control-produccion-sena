@@ -1,0 +1,18 @@
+<%= simple_form_for [@reference,@fichatecnica,@insumo_fichatecnica] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.label :insumo %><br>
+    <%= f.collection_select :insumo_id, Insumo.all, :id, :nombre, prompt: "Seleccione Un Insumo" %>
+    <%= f.label :Tipo_Medida %>
+    <%= f.collection_select :unidade_id, Unidade.all, :id, :tipo, prompt: "Seleccione Tipo Medida" %>
+    <%= f.input :cantidad %>
+    <%= f.input :observaciones %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'cancelar', 
+    fichatecnica_insumo_fichatecnicas_path(@fichatecnica), :class => 'btn btn-default' %>
+  </div>
+<% end %>

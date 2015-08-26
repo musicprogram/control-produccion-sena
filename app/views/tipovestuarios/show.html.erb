@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tipovestuario.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tipovestuario.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_tipovestuario_path(@tipovestuario) %> |
+<%= link_to 'Back', tipovestuarios_path %>

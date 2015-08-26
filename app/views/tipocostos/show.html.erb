@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tipocosto.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tipocosto.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_tipocosto_path(@tipocosto) %> |
+<%= link_to 'Back', tipocostos_path %>

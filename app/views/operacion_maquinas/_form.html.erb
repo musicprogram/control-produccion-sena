@@ -1,0 +1,37 @@
+<%= simple_form_for [@reference,@fichatecnica,@operacion_maquina] do |f| %>
+  <%= f.error_notification %>
+
+   <div class="field">
+       <%= f.input :num %>
+   </div>
+   <div class="form-actions">
+       <%= f.label :operacion %>
+       <%= f.collection_select :operacion_id, Operacion.all, :id, :nombre, prompt: "Seleccione una Operacion" %>
+   </div>
+   
+   <div class="form-actions">
+     <%= f.label :Tipo_operacion %>
+     <%= f.collection_select :tioperacion_id, Tioperacion.all, :id, :nombre, prompt: "Seleccione un Tipo operacion "%>
+   </div>
+  
+   <div class="form-actions">
+      <%= f.label :maquina %><br>
+      <%= f.collection_select :maquina_id, Maquina.all, :id, :nombre, prompt: "Seleccione una Maquina" %>
+   </div>
+  
+  <div class="form-inputs">
+    <%= f.input :sam %>
+    <%= f.input :calibreaguja %>
+    <%= f.input :ppp %>
+    <%= f.input :margencostura %>
+    <%= f.input :hilo %>
+    <%= f.input :guia_acesorios %>
+    <%= f.input :observaciones %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'cancelar', 
+    fichatecnica_operacion_maquinas_path(@fichatecnica), :class => 'btn btn-default' %>
+  </div>
+<% end %>

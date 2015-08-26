@@ -1,0 +1,2 @@
+module PiezaFichatecnicasHelper
+end

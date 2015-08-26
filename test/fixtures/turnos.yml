@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jornada: MyString
+  hora_inicio: MyString
+  hora_fin: MyString
+
+two:
+  jornada: MyString
+  hora_inicio: MyString
+  hora_fin: MyString

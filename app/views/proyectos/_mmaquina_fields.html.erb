@@ -1,0 +1,8 @@
+
+    
+    <div class="nested-fields well">
+        
+       <%= f.collection_select :maquina_id, Maquina.all, :id, :nombre, {prompt: "Seleccione Maquina"}, {class: "form-control"}  %>
+
+       <%= link_to_remove_association 'borrar Maquina', f %> 
+    </div>

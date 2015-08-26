@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  balance_id: 
+  operario: 1
+  operacion: 1
+  maquina: 1
+  sam: 1.5
+
+two:
+  balance_id: 
+  operario: 1
+  operacion: 1
+  maquina: 1
+  sam: 1.5

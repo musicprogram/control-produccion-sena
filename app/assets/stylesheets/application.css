@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+
+.centrar{
+    text-align: center;
+}
+
+
+
+a:hover{
+background-color: transparent;
+}
+
+
+/* Titulos de todas las tablas*/
+h1{
+    text-align:center;
+}
+
+/* Bordes para campo de los index o formularios */
+.borde{
+    border: solid 1px;
+    height: 30px;
+    margin: 0.5px;
+}
+
+/* Tamaño del baner con la imagen*/
+.banner{
+    height:150px;
+    width:103%;
+    margin: -1.4% 0% -1.4% -1.4%;
+}
+
+/* margen entre la barra de navegacion y el well*/
+.well{
+    margin:-1.2% 0% 0% 0%;
+}
+
+
+
+ol.c{
+    list-style-type: upper-roman;
+}

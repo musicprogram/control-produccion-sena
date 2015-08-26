@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Tipo de documento:</strong>
+  <%= @operario.documento.nombre rescue nil %>
+</p>
+<p>
+  <strong>documento:</strong>
+  <%= @operario.numdocumento %>
+</p>
+<p>
+  <strong>Nombre:</strong>
+  <%= @operario.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @operario.apellido %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @operario.email %>
+</p>
+
+<p>
+  <strong>Grupo:</strong>
+  <%= @operario.grupo.nombre rescue nil %>
+</p>
+
+<p>
+  <strong>Ayuda:</strong>
+  <%= @operario.ayuda %>
+</p>
+
+<%= link_to 'Edit', edit_operario_path(@operario) %> |
+<%= link_to 'Back', operarios_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Medida:</strong>
+  <%= @medida_talla.medida %>
+</p>
+
+<p>
+  <strong>Talla:</strong>
+  <%= @medida_talla.talla %>
+</p>
+
+<p>
+  <strong>Fichatecnica:</strong>
+  <%= @medida_talla.fichatecnica %>
+</p>
+
+ <% for talla in @medida_talla.tallas %>
+  <li><%= h talla.content %></li>
+<p>
+  <strong>Centimetros:</strong>
+  <%= @medida_talla.centimetros %>
+</p>
+
+<p>
+  <strong>Tolerancia:</strong>
+  <%= @medida_talla.tolerancia %>
+</p>
+
+<%= link_to 'Edit', edit_medida_talla_path(@medida_talla) %> |
+<%= link_to 'Back', medida_tallas_path %>

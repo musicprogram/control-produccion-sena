@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pturnos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proyecto</th>
+      <th>Turno</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pturnos.each do |pturno| %>
+      <tr>
+        <td><%= pturno.proyecto %></td>
+        <td><%= pturno.turno %></td>
+        <td><%= link_to 'Show', pturno %></td>
+        <td><%= link_to 'Edit', edit_pturno_path(pturno) %></td>
+        <td><%= link_to 'Destroy', pturno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pturno', new_pturno_path %>

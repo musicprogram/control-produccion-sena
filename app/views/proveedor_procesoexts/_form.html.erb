@@ -1,0 +1,31 @@
+<%= simple_form_for [@reference,@fichatecnica,@proveedor_procesoext] do |f| %>
+  <%= f.error_notification %>
+
+  
+ <div class="field">
+    <%= f.label :proveedor %><br>
+    <%= f.collection_select :proveedor_id, Proveedor.all, :id, :nombre, prompt: "Seleccione Un Proveedor" %>
+  </div>
+  <div class="field">
+    <%= f.label :procesoext %><br>
+    <%= f.collection_select :procesoext_id, Procesoext.all, :id, :nombre, prompt: "Seleccione Un proceso Externo" %>
+  </div>
+  <div class="field">
+    
+    <%= f.input :descripcion %>
+  </div>  
+  <div class="field">
+   
+    <%= f.input :observaciones %>
+  </div>
+  <div class="field">
+   
+    <%= f.input :precio %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'cancelar', 
+    fichatecnica_proveedor_procesoexts_path(@fichatecnica), :class => 'btn btn-default' %>
+  </div>
+<% end %>

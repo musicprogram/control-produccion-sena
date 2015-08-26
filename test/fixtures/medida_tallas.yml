@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  medida_id: 
+  talla_id: 
+  fichatecnica_id: 
+  centimetros: MyString
+  tolerancia: MyString
+
+two:
+  medida_id: 
+  talla_id: 
+  fichatecnica_id: 
+  centimetros: MyString
+  tolerancia: MyString

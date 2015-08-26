@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @pieza_fichatecnica.material %>
+</p>
+
+<p>
+  <strong>Fichatecnica:</strong>
+  <%= @pieza_fichatecnica.fichatecnica %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @pieza_fichatecnica.cantidad %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @pieza_fichatecnica.observaciones %>
+</p>
+
+<%= link_to 'Edit', edit_pieza_fichatecnica_path(@pieza_fichatecnica) %> |
+<%= link_to 'Back', pieza_fichatecnicas_path %>

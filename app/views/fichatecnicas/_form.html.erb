@@ -1,0 +1,71 @@
+<%= simple_form_for [@reference,@fichatecnica] do |f| %>
+  <%= f.error_notification %>
+
+
+   <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+   <div class="field">
+    <%= f.label :tallapromedio %><br>
+    <%= f.text_field :tallapromedio %>
+  </div>
+  
+   <div class="field">
+    <%= f.label :modulo %><br>
+    <%= f.collection_select :modulo_id, Modulo.all, :id, :nombre, prompt: "Seleccione un Modulo" %>
+  </div>
+ 
+   <div class="field">
+    <%= f.label :talla %><br>
+    <% for talla in Talla.all %>
+    <%= check_box_tag "fichatecnica[talla_ids][]", talla.id, @fichatecnica.tallas.include?(talla) %>
+    <%= talla.titulo %>
+    <% end %>
+    <% hidden_field_tag "fichatecnica[talla_ids][]", "" %>
+  </div>
+      
+   
+  <div class="field">
+    <%= f.label :tela %><br>
+   <% for tela in Tela.all %>
+    <%= check_box_tag "fichatecnica[tela_ids][]", tela.id, @fichatecnica.telas.include?(tela) %>
+    <%= tela.nombre %>
+    <% end %>
+    <% hidden_field_tag "fichatecnica[tela_ids][]", "" %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <% for color in Color.all %>
+    <%= check_box_tag "fichatecnica[color_ids][]", color.id, @fichatecnica.colors.include?(color) %>
+    <%= color.nombre %>
+    <% end %>
+    <% hidden_field_tag "fichatecnica[color_ids][]", "" %>
+  </div>
+  <div class="field">
+    <%= f.label :especificacion %><br>
+    <% for especificacion in Especificacion.all %>
+    <%= check_box_tag "fichatecnica[especificacion_ids][]", especificacion.id, @fichatecnica.especificacions.include?(especificacion) %>
+    <%= especificacion.descripcion %>
+    <% end %>
+    <% hidden_field_tag "fichatecnica[especificacion_ids][]", "" %>
+  </div>
+  <div class="field">
+    <%= f.label :estandar %><br>
+    <% for estandar in Estandar.all %>
+    <%= check_box_tag "fichatecnica[estandar_ids][]", estandar.id, @fichatecnica.estandars.include?(estandar) %>
+    <%= estandar.descripcion %>
+    <% end %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :muestra %>
+    <%= f.file_field :muestra %>
+  </div>
+   
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'cancelar', 
+    reference_fichatecnicas_path(@reference) %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @estadom.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @estadom.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_estadom_path(@estadom) %> |
+<%= link_to 'Back', estadoms_path %>

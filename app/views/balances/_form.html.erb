@@ -1,0 +1,31 @@
+<%= form_for(@balance) do |f| %>
+  <% if @balance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@balance.errors.count, "error") %> prohibited this balance from being saved:</h2>
+
+      <ul>
+      <% @balance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :reference_id %><br>
+    <%= f.collection_select :reference_id, Reference.all, :id, :ref, { prompt: "Seleccione referencia" } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pedido_prendas %><br>
+    <%= f.number_field :pedido_prendas %>
+  </div>
+  <div class="field">
+    <%= f.label :jornada_laboral %><br>
+    <%= f.number_field :jornada_laboral %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

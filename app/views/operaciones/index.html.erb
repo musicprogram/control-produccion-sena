@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+       
+<h1>Listar Operaciones</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operaciones.each do |operacion| %>
+      <tr>
+        <td><%= operacion.nombre %></td>
+        <td><%= operacion.descripcion %></td>
+        <td><%= link_to 'Mostrar', operacion %></td>
+        <td><%= link_to 'Editar', edit_operacion_path(operacion) %></td>
+        <td><%= link_to 'Eliminar', operacion, method: :delete, data: { confirm: 'Estas Seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1 class="centrar">
+  
+<%= link_to 'Agregar Operacion', new_operacion_path %>
+</h1>
+
+  </div>
+</div>

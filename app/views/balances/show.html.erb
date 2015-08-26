@@ -1,0 +1,61 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<br>
+
+<%= link_to 'Edit', edit_balance_path(@balance) %> |
+<%= link_to 'Back', balances_path %>
+
+<br>
+<br>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @balance.reference.ref %> // 
+  <strong>Pedido prendas:</strong>
+  <%= @balance.pedido_prendas %> // 
+  <strong>Jornada laboral:</strong>
+  <%= @balance.jornada_laboral %> // 
+  <strong>Talk time:</strong>
+  <%= @balance.talk_time.round(1) %> // 
+  <strong>Tiempo total:</strong>
+  <%= @balance.tiempo_total %> // 
+  <strong>Sumatoria sam:</strong> 
+  <%= @resultbalances.sum(:sam).round(1) %> // 
+  <strong>Numero de operarios:</strong> 
+  <%= mostrar_balance(@resultbalances, @balance.talk_time).length %> // 
+  <strong>Total tiempo sobrante:</strong> 
+  <%= sum(mostrar_balance(@resultbalances, @balance.talk_time)).round(1) %>
+</p>
+
+<h1>Resultado balance</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Operario</th>
+      <th>Operacion</th>
+      <th>Maquina</th>
+      <th>Sam</th>
+      <th>Suma Sam</th>
+      <th>talk time - Sam</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% mostrar_balance(@resultbalances, @balance.talk_time).each do |resultbalance| %>
+      <tr>
+        <td><%= resultbalance[:operario] %></td>
+        <td><%= resultbalance[:operacion] %></td>
+        <td><%= resultbalance[:maquina] %></td>
+        <td><%= resultbalance[:sam] %></td>
+        <td><%= resultbalance[:samA].round(1) %></td>
+        <td><%= resultbalance[:sobrante].round(1) %></td>
+    <% end %>
+  </tbody>
+</table>
+
+
+</div>

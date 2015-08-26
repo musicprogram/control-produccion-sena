@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Imodulos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tinstructor</th>
+      <th>Modulo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @imodulos.each do |imodulo| %>
+      <tr>
+        <td><%= imodulo.tinstructor %></td>
+        <td><%= imodulo.modulo %></td>
+        <td><%= link_to 'Show', imodulo %></td>
+        <td><%= link_to 'Edit', edit_imodulo_path(imodulo) %></td>
+        <td><%= link_to 'Destroy', imodulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Imodulo', new_imodulo_path %>

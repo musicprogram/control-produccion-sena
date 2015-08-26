@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Insumo</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Insumo</th>
+      <th>Fichatecnica</th>
+      <th>Tipo Medida</th>
+      <th>Cantidad</th>
+      <th>Observaciones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insumo_fichatecnicas.each do |insumo_fichatecnica| %>
+      <tr>
+        <td><%= insumo_fichatecnica.insumo.nombre rescue nil %></td>
+        <td><%= insumo_fichatecnica.fichatecnica.reference.ref %></td>
+        <td><%= insumo_fichatecnica.unidade.tipo rescue nil %></td>
+        <td><%= insumo_fichatecnica.cantidad %></td>
+        <td><%= insumo_fichatecnica.observaciones %></td>
+        <td><%= link_to 'Edit', edit_fichatecnica_insumo_fichatecnica_path(@fichatecnica,insumo_fichatecnica) %></td>
+        <td><%= link_to 'Destroy', fichatecnica_insumo_fichatecnica_path(@fichatecnica,insumo_fichatecnica), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Insumo', new_fichatecnica_insumo_fichatecnica_path(@fichatecnica) %>
+<%= link_to 'Back', reference_fichatecnicas_path(@fichatecnica) %>

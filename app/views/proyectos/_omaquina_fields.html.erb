@@ -1,0 +1,11 @@
+<div class="nested-fields well">
+    <%= f.collection_select :maquina_id, Maquina.all, :id, :nombre, prompt: 'Seleccione Maquina' %>
+    <%= link_to_remove_association "Eliminar Maquina", f %>
+    
+    <div class="fielset well">
+        <%= f.simple_fields_for :moperaciones do |moperacion| %>
+            <%= render 'moperacion_fields', f: moperacion %>
+        <% end %>   
+        <%= link_to_add_association 'Agregar Operaciones', f, :moperaciones %>
+  </div>
+</div>

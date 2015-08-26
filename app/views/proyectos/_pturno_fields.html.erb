@@ -1,0 +1,14 @@
+<div class="nested-fields well">
+  
+    <%= f.collection_select :turno_id, Turno.all, :id, :jornada,{prompt: "Seleccione Turno"}, {class: "form-control"}  %>
+    <%= link_to_remove_association "remover Turno", f %>
+    
+    <div class="fielset well">
+        <%= f.simple_fields_for :tinstructors do |tinstructor| %>
+            <%= render 'tinstructor_fields', f: tinstructor %>
+        <% end %>   
+        <%= link_to_add_association 'Agregar Instructor', f, :tinstructors %>
+  </div>
+  
+</div>
+  

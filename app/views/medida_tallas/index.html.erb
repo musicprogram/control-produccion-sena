@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Medida Prenda</h1>
+
+<table>
+  <thead>
+    <tr>
+       <th>Talla</th>
+      <th>Medida</th>
+      <th>Centimetros</th>
+      <th>Tolerancia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medida_tallas.each do |medida_talla| %>
+      <tr>
+        <td><%= medida_talla.talla.titulo %></td>
+        <td><%= medida_talla.medida.medida %></td>
+        <td><%= medida_talla.centimetros %></td>
+        <td><%= medida_talla.tolerancia %></td>
+        <td><%= link_to 'Edit', edit_fichatecnica_medida_talla_path(@fichatecnica,medida_talla) %></td>
+        <td><%= link_to 'Destroy',fichatecnica_medida_talla_path(@fichatecnica,medida_talla), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medida prenda', new_fichatecnica_medida_talla_path(@fichatecnica) %>
+<%= link_to 'Back', reference_fichatecnicas_path(@fichatecnica) %>

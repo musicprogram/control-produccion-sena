@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ioperarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tinstructor</th>
+      <th>Operario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ioperarios.each do |ioperario| %>
+      <tr>
+        <td><%= ioperario.tinstructor %></td>
+        <td><%= ioperario.operario %></td>
+        <td><%= link_to 'Show', ioperario %></td>
+        <td><%= link_to 'Edit', edit_ioperario_path(ioperario) %></td>
+        <td><%= link_to 'Destroy', ioperario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ioperario', new_ioperario_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @proveedor_procesoext.proveedor %>
+</p>
+
+<p>
+  <strong>Procesoext:</strong>
+  <%= @proveedor_procesoext.procesoext %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @proveedor_procesoext.descripcion %>
+</p>
+
+<p>
+  <strong>Observaciones:</strong>
+  <%= @proveedor_procesoext.observaciones %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @proveedor_procesoext.precio %>
+</p>
+
+<%= link_to 'Edit', edit_proveedor_procesoext_path(@proveedor_procesoext) %> |
+<%= link_to 'Back', proveedor_procesoexts_path %>

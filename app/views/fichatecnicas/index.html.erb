@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fichatecnicas</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Referencia</th>
+      <th>Descripcion</th>
+      <th>Tallapromedio</th>
+      <th>Modulo</th>
+      <th>Talla</th>
+      <th>Tela</th>
+      <th>Color</th>
+      <th>Especificacion</th>
+      <th>Estandar</th>
+      <th>Procesoext</th>
+      <th>materiales</th>
+      <th>insumos</th>
+      <th>Pieza</th>
+      <th>Muestra</th>
+      <th>Medidas</th>
+      <th>Secuencia Operacional</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fichatecnicas.each do |fichatecnica| %>
+      <tr>
+        <td><%= fichatecnica.reference.ref %></td>
+        <td><%= fichatecnica.descripcion %></td>
+        <td><%= fichatecnica.tallapromedio %></td>
+        <td><%= fichatecnica.modulo.nombre rescue nil %></td>
+        <td><%= mostrar(fichatecnica.talla_ids) %></td>
+        <td><%= mostrar1(fichatecnica.tela_ids) %></td>
+        <td><%= mostrar2(fichatecnica.color_ids) %></td>
+        <td><%= mostrar3(fichatecnica.especificacion_ids) %></td>
+        <td><%= mostrar4(fichatecnica.estandar_ids) %></td>
+        <td><center><%= link_to 'Procesos de la Prenda', fichatecnica_proveedor_procesoexts_path(fichatecnica) %></center></td>
+        <td><center><%= link_to 'Materiales', fichatecnica_material_fichatecnicas_path(fichatecnica) %></center></td>
+        <td><center><%= link_to 'Insumos', fichatecnica_insumo_fichatecnicas_path(fichatecnica) %></center></td>
+        <td><center><%= link_to 'Piezas', fichatecnica_pieza_fichatecnicas_path(fichatecnica) %></center></td>
+        <td><%= image_tag(fichatecnica.muestra.url, height: '700', width: '1022') %></td>
+        <td><center><%= link_to 'MEDIDAS', fichatecnica_medida_tallas_path(fichatecnica) %></center></td>
+        <td><center><%= link_to 'SECUENCIA OPERACIONAL', fichatecnica_operacion_maquinas_path(fichatecnica) %></center></td>
+        <td><%= link_to 'Edit', edit_reference_fichatecnica_path(@reference,fichatecnica) %></td>
+        <td><%= link_to 'Destroy', reference_fichatecnica_path(@reference,fichatecnica), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fichatecnica', new_reference_fichatecnica_path(@reference) %>

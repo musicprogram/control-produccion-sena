@@ -1,0 +1,1 @@
+json.extract! @operacion_maquina, :id, :operacion_id, :maquina_id, :tioperacion_id, :fichatecnica_id, :sam, :calibreaguja, :ppp, :margencostura, :guia_acesorios, :observaciones, :created_at, :updated_at

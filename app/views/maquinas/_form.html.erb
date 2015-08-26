@@ -1,0 +1,37 @@
+<%= form_for(@maquina) do |f| %>
+  <% if @maquina.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@maquina.errors.count, "error") %> prohibited this maquina from being saved:</h2>
+
+      <ul>
+      <% @maquina.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :serial %><br>
+    <%= f.text_field :serial %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :modulo_id %><br>
+    <%= f.collection_select :modulo_id, Modulo.all, :id, :nombre, prompt: "Seleccione Un Modulo" %>
+  </div>
+  <div class="field">
+    <%= f.label :estadom_id %><br>
+    <%= f.collection_select :estadom_id, Estadom.all, :id, :titulo, prompt: "Seleccione Estado de la Maquina" %>
+  </div>
+  <div class="field">
+    <%= f.label :Especificaciones_Tecnicas %>
+    <%= f.file_field :especificaciones %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

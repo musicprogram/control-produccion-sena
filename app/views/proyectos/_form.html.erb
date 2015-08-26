@@ -1,0 +1,22 @@
+<%= simple_form_for(@proyecto) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nombre %>
+  </div>
+ 
+  <div class="jumbotron">
+    
+    <%= f.simple_fields_for :pturnos do |pturno| %>
+       <%= render 'pturno_fields', f: pturno %>
+    <% end %>   
+      
+    <%= link_to_add_association 'Agregar Turno', f, :pturnos %>
+  
+  </div>
+  
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @estandar.descripcion %>
+</p>
+
+<p>
+  <strong>Ayuda:</strong>
+  <%= @estandar.ayuda %>
+</p>
+
+<%= link_to 'Edit', edit_estandar_path(@estandar) %> |
+<%= link_to 'Back', estandares_path %>

@@ -1,0 +1,12 @@
+<div class="nested-fields">
+    <%= f.collection_select :instructor_id, Instructor.all, :id, :nombre,{prompt: "Seleccione Instructor"}, {class: "form-control"} %>
+    <%= link_to_remove_association "remover Instructor", f %>
+    
+    <div class="fielset well">
+        <%= f.simple_fields_for :imodulos do |imodulo| %>
+            <%= render 'imodulo_fields', f: imodulo %>
+        <% end %>   
+        <%= link_to_add_association 'Agregar Modulo', f, :imodulos %>
+    </div>
+    
+</div>

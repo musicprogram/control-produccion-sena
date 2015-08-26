@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Estadopros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estadopros.each do |estadopro| %>
+      <tr>
+        <td><%= estadopro.estado %></td>
+        <td><%= link_to 'Show', estadopro %></td>
+        <td><%= link_to 'Edit', edit_estadopro_path(estadopro) %></td>
+        <td><%= link_to 'Destroy', estadopro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Estadopro', new_estadopro_path %>

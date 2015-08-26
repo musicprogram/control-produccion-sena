@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Salario:</strong>
+  <%= number_to_currency(@sueldo.salario, precision: 3) %>
+  
+</p>
+
+<p>
+  <strong>Salario porcentaje:</strong>
+  <%= @sueldo.salario_porcentaje.round(2) %>%
+</p>
+
+<p>
+  <strong>Subsidio:</strong>
+  <%= number_to_currency(@sueldo.subsidio, precision: 3) %>
+</p>
+
+<p>
+  <strong>Subsidio procentaje:</strong>
+  <%= @sueldo.subsidio_procentaje.round(2) rescue nil %>%
+</p>
+
+<p>
+  <strong>Total sueldo:</strong>
+  <%= number_to_currency(@sueldo.total_sueldo, precision: 3) %>
+</p>
+
+<p>
+  <strong>Total porcentaje:</strong>
+  <%= @sueldo.total_porcentaje.round(2) %>%
+</p>
+
+<%= link_to 'Edit', edit_sueldo_path(@sueldo) %> |
+<%= link_to 'Back', sueldos_path %>

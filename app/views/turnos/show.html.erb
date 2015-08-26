@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jornada:</strong>
+  <%= @turno.jornada %>
+</p>
+
+<p>
+  <strong>Hora inicio:</strong>
+  <%= @turno.hora_inicio %>
+</p>
+
+<p>
+  <strong>Hora fin:</strong>
+  <%= @turno.hora_fin %>
+</p>
+
+<%= link_to 'Edit', edit_turno_path(@turno) %> |
+<%= link_to 'Back', turnos_path %>

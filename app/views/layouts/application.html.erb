@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <!--link rel="shortcut icon" href="assets/dz.ico"  "Imagen del icono en el navegador" /-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Produccion</title>
+     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     <%= csrf_meta_tags %>
+     
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+     
+  </head>
+  <body>
+      
+    <header>
+        <%= render 'layouts/navigation' %>
+    </header>
+    
+     <%= yield %>
+     
+  </body>
+
+     
+  
+</html>

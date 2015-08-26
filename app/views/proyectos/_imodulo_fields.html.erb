@@ -1,0 +1,12 @@
+<div class="nested-fields well">
+    <%= f.collection_select :modulo_id, Modulo.all, :id, :nombre, prompt: 'Seleccione Modulo'%>
+    <%= link_to_remove_association 'Eliminar Modulo', f %>
+    
+    <div class="fielset well">
+        <%= f.simple_fields_for :moperarios do |moperario| %>
+            <%= render 'moperario_fields', f: moperario %>
+        <% end %>   
+        <%= link_to_add_association 'Agregar Operario', f, :moperarios %>
+    </div>
+    
+</div>

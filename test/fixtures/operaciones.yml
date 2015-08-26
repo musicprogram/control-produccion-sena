@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  sam: MyString
+  descripcion: MyText
+  maquina_id: 
+  modulo_id: 
+
+two:
+  nombre: MyString
+  sam: MyString
+  descripcion: MyText
+  maquina_id: 
+  modulo_id: 

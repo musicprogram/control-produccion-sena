@@ -1,0 +1,60 @@
+<!-- Diseño de Bootstrap que aun no sirve, verison SASS -->
+<!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  _form
+  
+  <% for product in Product.all %>
+      <%= check_box_tag "client[product_ids][]", product.id, @client.products.include?(product) %>
+      <%= product.nombre %>
+    <% end %>
+  <%= hidden_field_tag "client[product_ids][]", "" %>
+  
+  controlador
+  
+  {:product_ids => []}
+  
+  helper
+  
+  def mostrar(a)
+        b = Array.new
+        a.each do | x |
+            y = Product.find_by id: x
+            b << y.nombre
+        end
+        
+        return b.join(", ")
+    end
+    
+    index
+    
+    <td><%= mostrar(client.product_ids) %></td>
+    
+    Navegacion del sistema
+    
+    <nav>
+      <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/modulos" class=" ajax-link">Modulos</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+      </ul>
+    </nav>
+    
+    
+    
+ciclo para cocoon 
+
+<ol>
+  <% for pmodulo in @proyecto.pmodulos %>
+    <li><%= h mostrarModulo(pmodulo.modulo_id) rescue nil %></li>
+    <ul>
+      <% for mmaquina in pmodulo.mmaquinas %>
+        <li><%= h mostrarMaquina(mmaquina.maquina_id) rescue nil %></li>
+      <% end %>
+    </ul>  
+  <% end %>
+</ol>

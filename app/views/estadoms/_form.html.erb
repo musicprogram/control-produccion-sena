@@ -1,0 +1,25 @@
+<%= form_for(@estadom) do |f| %>
+  <% if @estadom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estadom.errors.count, "error") %> prohibited this estadom from being saved:</h2>
+
+      <ul>
+      <% @estadom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

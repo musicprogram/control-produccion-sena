@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ref:</strong>
+  <%= @reference.ref %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @reference.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @reference.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<%= link_to 'Back', references_path %>

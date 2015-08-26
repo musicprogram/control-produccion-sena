@@ -1,0 +1,16 @@
+<%= simple_form_for(@instructor) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.collection_select :documento_id, Documento.all, :id, :nombre,{prompt: "Seleccione Documento"}, {class: "form-control"}  %>
+    <%= f.input :numdocumento %>
+    <%= f.input :nombre %>
+    <%= f.input :apellidos %>
+    <%= f.input :email %>
+    <%= f.collection_select :modulo_id, Modulo.all, :id, :nombre,{prompt: "Seleccione Modulo"}, {class: "form-control"}  %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  salario: 1.5
+  salario_porcentaje: 1.5
+  subsidio: 1.5
+  subsidio_procentaje: 1.5
+  total_sueldo: 1.5
+  total_porcentaje: 1.5
+
+two:
+  salario: 1.5
+  salario_porcentaje: 1.5
+  subsidio: 1.5
+  subsidio_procentaje: 1.5
+  total_sueldo: 1.5
+  total_porcentaje: 1.5

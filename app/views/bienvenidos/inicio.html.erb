@@ -1,0 +1,189 @@
+<style>
+a:hover{
+    
+background-color: transparent;
+}
+
+
+h3{
+    text-align: center;
+}
+
+.fondo{
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #F7F7F7),
+	color-stop(1, #C4C4C4)
+);
+background-image: -o-linear-gradient(bottom, #F7F7F7 0%, #C4C4C4 100%);
+background-image: -moz-linear-gradient(bottom, #F7F7F7 0%, #C4C4C4 100%);
+background-image: -webkit-linear-gradient(bottom, #F7F7F7 0%, #C4C4C4 100%);
+background-image: -ms-linear-gradient(bottom, #F7F7F7 0%, #C4C4C4 100%);
+background-image: linear-gradient(to bottom, #F7F7F7 0%, #C4C4C4 100%);
+}
+</style>
+
+
+<div class="container fondo">
+
+<div class="row">
+    
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+<h3 class="center">
+           
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+ <%= image_tag("documentos.png")%>
+</a>
+</h3>
+
+
+<div class="collapse" id="collapseExample">
+  <div class="well">
+<%= link_to 'Documentos', documentos_path %> 
+<%= link_to 'Instructores', instructors_path %>
+<%= link_to 'Grupos', grupos_path %>
+<%= link_to 'Operarios', operarios_path %>
+<%= link_to 'Turnos', turnos_path %>
+<%= link_to 'Proveedores', proveedores_path %>
+<%= link_to 'Clientes', clientes_path %>
+</div>
+</div>
+
+       
+    </div>
+     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+ 
+ <h3 class="center">
+           
+<a class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+  <%= image_tag("modulos.png")%>
+</a>
+
+ </h3>
+
+
+<div class="collapse" id="collapseExample1">
+  <div class="well">
+    <%= link_to 'Estados de Maquinas', estadoms_path %>
+    <%= link_to 'Maquinas', maquinas_path %> 
+    <%= link_to 'Tipo de Operaciones', tioperaciones_path %>
+    <%= link_to 'Operaciones', operaciones_path %>
+  </div>
+</div>
+
+
+        
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+       
+<h3 class="center">
+    <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+  <%= image_tag("maquinas.png")%>
+</a> 
+</h3>
+
+
+<div class="collapse" id="collapseExample2">
+  <div class="well">
+    <%= link_to 'Telas', telas_path %>
+    <%= link_to 'Colores', colors_path %>
+    <%= link_to 'Piezas', piezas_path %>
+    <%= link_to 'Insumos', insumos_path %>
+    <%= link_to 'Materiales', materials_path %>
+    <%= link_to 'Tallas', tallas_path %>
+    <%= link_to 'Medidas de la Prenda', medidaprendas_path %>
+    <%= link_to 'Especificaciones Generales', especificacions_path %>
+    <%= link_to 'Estandares de Calidad', estandars_path %>
+  </div>
+</div>
+        
+    </div>
+    
+</div>
+
+<div class="row">
+    
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+        
+<h3 class="center">
+    
+<a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+  <%= image_tag("costos.png")%>
+</a>
+</h3>
+
+
+<div class="collapse" id="collapseExample3">
+  <div class="well">
+   <%= link_to 'Tipo de Costos', tipocostos_path %>
+   <%= link_to 'Tipo de Moneda', tipmoneys_path %>
+   <%= link_to 'Proceso Externo', procesoexts_path %>
+   <%= link_to 'Costos Fijos', costo_fijos_path %>
+   <%= link_to 'Sueldo', sueldos_path %>
+   <%= link_to 'Prestaciones', prestaciones_path %>
+   <%= link_to 'Días Laborales', dlaborals_path %>
+   <%= link_to 'Costo Mes', costomes_path %>
+  </div>
+</div>
+        
+    </div>
+     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+        
+<h3 class="center">
+    <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+  <%= image_tag("fichatecnica.png")%>
+</a>
+</h3>
+
+
+<div class="collapse" id="collapseExample4">
+  <div class="well">
+   <%= link_to 'Referencias', references_path %>
+   <%= link_to 'Proyectos', proyectos_path %>
+   
+  </div>
+</div>
+
+        
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+        
+<h3 class="center">
+    <a class="btn btn-default" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+  <%= image_tag("ayuda.png")%>
+</a>
+</h3>
+
+
+
+
+<div class="collapse" id="collapseExample5">
+  <div class="well">
+    <%= link_to 'Categoría Ayudas', cateayudas_path %>
+    <%= link_to 'Ayudas', ayudas_path %>
+  </div>
+</div>
+        
+    </div>
+    
+</div>
+
+
+
+</div>
+
+
+
+<script>
+    	$(document).on('page:change', function () {
+    	
+    	$('.collapse').on('hidden.bs.collapse', function () {
+  				 $('.collapse').collapse('hide')
+		})
+    	
+    	  
+    	 
+	});
+</script>

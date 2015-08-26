@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Costomes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Porcenjatesalud</th>
+      <th>Salud</th>
+      <th>Porcentajepension</th>
+      <th>Pension</th>
+      <th>Porcentajerprofesional</th>
+      <th>Rprofesional</th>
+      <th>Porcentajesena</th>
+      <th>Sena</th>
+      <th>Porcentajeicbf</th>
+      <th>Icbf</th>
+      <th>Porcentajecajacompensacion</th>
+      <th>Cajacompensaciontotal</th>
+      <th>Porcentajetotal costom</th>
+      <th>Total costom</th>
+      <th>Porcentajetotalneto</th>
+      <th>Totalneto</th>
+      <th>Sueldo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @costomes.each do |costome| %>
+      <tr>
+        <td><%= costome.porcenjatesalud %></td>
+        <td><%= costome.salud %></td>
+        <td><%= costome.porcentajepension %></td>
+        <td><%= costome.pension %></td>
+        <td><%= costome.porcentajerprofesional %></td>
+        <td><%= costome.rprofesional %></td>
+        <td><%= costome.porcentajesena %></td>
+        <td><%= costome.sena %></td>
+        <td><%= costome.porcentajeicbf %></td>
+        <td><%= costome.icbf %></td>
+        <td><%= costome.porcentajecajacompensacion %></td>
+        <td><%= costome.cajacompensaciontotal %></td>
+        <td><%= costome.porcentajetotal_costom %></td>
+        <td><%= costome.total_costom %></td>
+        <td><%= costome.porcentajetotalneto %></td>
+        <td><%= costome.totalneto %></td>
+        <td><%= costome.sueldo %></td>
+        <td><%= link_to 'Show', costome %></td>
+        <td><%= link_to 'Edit', edit_costome_path(costome) %></td>
+        <td><%= link_to 'Destroy', costome, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Costome', new_costome_path %>

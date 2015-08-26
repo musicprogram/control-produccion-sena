@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Medidas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Medida</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medidas.each do |medida| %>
+      <tr>
+        <td><%= medida.medida %></td>
+        <td><%= link_to 'Show', medida %></td>
+        <td><%= link_to 'Edit', edit_medida_path(medida) %></td>
+        <td><%= link_to 'Destroy', medida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medida', new_medida_path %>

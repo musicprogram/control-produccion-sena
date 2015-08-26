@@ -1,0 +1,12 @@
+<%= simple_form_for(@tinstructor) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :pturno %>
+    <%= f.association :instructor %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

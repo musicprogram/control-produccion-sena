@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Siglas:</strong>
+  <%= @tipmoney.siglas %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tipmoney.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_tipmoney_path(@tipmoney) %> |
+<%= link_to 'Back', tipmoneys_path %>

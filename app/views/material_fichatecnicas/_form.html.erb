@@ -1,0 +1,22 @@
+<%= simple_form_for [@reference,@fichatecnica,@material_fichatecnica] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="field">
+    <%= f.label :material %>
+    <%= f.collection_select :material_id, Material.all, :id, :nombre, prompt: "Seleccione Material" %>
+  </div>
+  <div class="field">
+    <%= f.label :Tipo_Medida %>
+    <%= f.collection_select :unidade_id, Unidade.all, :id, :tipo, prompt: "Seleccione Unidad de Medida "%>
+  </div>
+  <div class="field">  
+    <%= f.input :cantidad %>
+    <%= f.input :observaciones %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'cancelar', 
+    fichatecnica_material_fichatecnicas_path(@fichatecnica), :class => 'btn btn-default' %>
+  </div>
+<% end %>
