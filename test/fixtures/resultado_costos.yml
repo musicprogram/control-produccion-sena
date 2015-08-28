@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dlaborales_mes: 1.5
+  costo_dia: 1.5
+  costo_hora: 1.5
+  costo_minuto: 1.5
+  recargo_adicional: 1.5
+  total_minuto: 1.5
+  sueldo_id: 
+  dlaboral_id: 
+  prestacion_id: 
+  costome_id: 
+
+two:
+  dlaborales_mes: 1.5
+  costo_dia: 1.5
+  costo_hora: 1.5
+  costo_minuto: 1.5
+  recargo_adicional: 1.5
+  total_minuto: 1.5
+  sueldo_id: 
+  dlaboral_id: 
+  prestacion_id: 
+  costome_id: 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :resultado_costos
   resources :prestaciones
   resources :costomes
   resources :sueldos
