@@ -25,6 +25,14 @@ background-image: linear-gradient(to bottom, #F7F7F7 0%, #C4C4C4 100%);
 }
 </style>
 
+ 
+  <!-- Banner con la imagen -->
+  <div class="well">
+    <%= image_tag "Banner.png", class: 'banner' %> <!-- Con esto agregamos la imagen en el banner con su clase -->
+  </div>
+  
+
+
 
 <div class="container fondo">
 
@@ -125,6 +133,7 @@ background-image: linear-gradient(to bottom, #F7F7F7 0%, #C4C4C4 100%);
    <%= link_to 'Prestaciones', prestaciones_path %>
    <%= link_to 'Días Laborales', dlaborals_path %>
    <%= link_to 'Costo Mes', costomes_path %>
+   <%= link_to 'Resultado Costos', resultado_costos_path %>
   </div>
 </div>
         

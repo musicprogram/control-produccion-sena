@@ -2,7 +2,7 @@
 
 <p>
   <strong>Cesantias:</strong>
-  <%= @prestacion.cesantias %> 
+  <%= @prestacion.cesantias.round(2) %> 
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Prima:</strong>
-  <%= number_to_currency(@prestacion.prima, precision: 3) %>
+  <%= @prestacion.prima.round(0) %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Vacaciones:</strong>
-  <%= number_to_currency(@prestacion.vacaciones, precision: 3) %>
+  <%= @prestacion.vacaciones.round(0) %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Intereses cesantias:</strong>
-  <%= number_to_currency(@prestacion.intereses_cesantias, precision: 3) %>
+  <%= @prestacion.intereses_cesantias.round(0) %>
 </p>
 
 <p>
@@ -42,7 +42,7 @@
 
 <p>
   <strong>Total prestacion:</strong>
-  <%= number_to_currency(@prestacion.total_prestacion, precision: 3) %>
+  <%= @prestacion.total_prestacion %>
 </p>
 
 <p>

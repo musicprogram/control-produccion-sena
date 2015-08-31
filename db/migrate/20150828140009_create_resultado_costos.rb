@@ -3,6 +3,7 @@ class CreateResultadoCostos < ActiveRecord::Migration
     create_table :resultado_costos do |t|
       t.float :dlaborales_mes
       t.float :costo_dia
+      t.integer :hlaborales
       t.float :costo_hora
       t.float :costo_minuto
       t.float :recargo_adicional

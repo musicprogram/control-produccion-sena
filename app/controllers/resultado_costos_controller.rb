@@ -10,11 +10,18 @@ class ResultadoCostosController < ApplicationController
   # GET /resultado_costos/1
   # GET /resultado_costos/1.json
   def show
+    @sueldos = Sueldo.all
+    @prestaciones = Prestacion.all
+    @dlaborals = Dlaboral.all
+    @costomes = Costome.all
+    @resultado_costos = ResultadoCosto.all
+    
   end
 
   # GET /resultado_costos/new
   def new
     @resultado_costo = ResultadoCosto.new
+    
   end
 
   # GET /resultado_costos/1/edit
@@ -69,6 +76,6 @@ class ResultadoCostosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resultado_costo_params
-      params.require(:resultado_costo).permit(:dlaborales_mes, :costo_dia, :costo_hora, :costo_minuto, :recargo_adicional, :total_minuto, :sueldo_id, :dlaboral_id, :prestacion_id, :costome_id)
+      params.require(:resultado_costo).permit(:dlaborales_mes, :costo_dia, :hlaborales, :costo_hora, :costo_minuto, :recargo_adicional, :total_minuto, :sueldo_id, :dlaboral_id, :prestacion_id, :costome_id)
     end
 end

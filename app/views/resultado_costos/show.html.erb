@@ -1,54 +1,219 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Dlaborales mes:</strong>
-  <%= @resultado_costo.dlaborales_mes %>
-</p>
-
-<p>
-  <strong>Costo dia:</strong>
-  <%= @resultado_costo.costo_dia %>
-</p>
-
-<p>
-  <strong>Costo hora:</strong>
-  <%= @resultado_costo.costo_hora %>
-</p>
-
-<p>
-  <strong>Costo minuto:</strong>
-  <%= @resultado_costo.costo_minuto %>
-</p>
-
-<p>
-  <strong>Recargo adicional:</strong>
-  <%= @resultado_costo.recargo_adicional %>
-</p>
-
-<p>
-  <strong>Total minuto:</strong>
-  <%= @resultado_costo.total_minuto %>
-</p>
-
-<p>
-  <strong>Sueldo:</strong>
-  <%= @resultado_costo.sueldo %>
-</p>
-
-<p>
-  <strong>Dlaboral:</strong>
-  <%= @resultado_costo.dlaboral %>
-</p>
-
-<p>
-  <strong>Prestacion:</strong>
-  <%= @resultado_costo.prestacion %>
-</p>
-
-<p>
-  <strong>Costome:</strong>
-  <%= @resultado_costo.costome %>
-</p>
-
+<div class="container">
+  
 <%= link_to 'Edit', edit_resultado_costo_path(@resultado_costo) %> |
 <%= link_to 'Back', resultado_costos_path %>
+
+
+</div>
+
+
+
+
+
+<div class="container">
+  <h2>Dynamic Tabs</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#sueldo">Sueldo</a></li>
+    <li><a data-toggle="tab" href="#prestacion">Prestaciones</a></li>
+    <li><a data-toggle="tab" href="#diaslabo">Días Laborales</a></li>
+    <li><a data-toggle="tab" href="#costosmes">Costo Mes</a></li>
+    <li><a data-toggle="tab" href="#resultado">Resultados</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="sueldo" class="tab-pane fade in active">
+     
+     
+  
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Salario</th>
+      
+      <th>Subsidio</th>
+      
+      <th>Total sueldo</th>
+      
+    
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sueldos.each do |sueldo| %>
+      <tr>
+        <td><%= number_to_currency(sueldo.salario, precision: 3) %></td> 
+        
+        <td><%= number_to_currency(sueldo.subsidio, precision: 3) %></td>
+        
+        <td><%= number_to_currency(sueldo.total_sueldo, precision: 3) %></td>
+        
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+     </div>
+    <div id="prestacion" class="tab-pane fade">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Cesantias</th>
+   
+      <th>Prima</th>
+    
+      <th>Vacaciones</th>
+      
+      <th>Intereses cesantias</th>
+     
+      <th>Total prestacion</th>
+     
+      <th>Sueldo</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prestaciones.each do |prestacion| %>
+      <tr>
+        <td><%= prestacion.cesantias %></td>
+      
+        <td><%= prestacion.prima %></td>
+    
+        <td><%= prestacion.vacaciones %></td>
+     
+        <td><%= prestacion.intereses_cesantias %></td>
+    
+        <td><%= prestacion.total_prestacion %></td>
+       
+        <td><%= prestacion.sueldo %></td>
+         </tr>
+    <% end %>
+  </tbody>
+</table>
+    </div>
+    <div id="diaslabo" class="tab-pane fade">
+     
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Dias año</th>
+      <th>Domingos</th>
+      <th>Festivos</th>
+      <th>Vacaciones</th>
+      <th>Total dias</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dlaborals.each do |dlaboral| %>
+      <tr>
+        <td><%= dlaboral.dias_año %></td>
+        <td><%= dlaboral.domingos %></td>
+        <td><%= dlaboral.festivos %></td>
+        <td><%= dlaboral.vacaciones %></td>
+        <td><%= dlaboral.total_dias %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+     </div>
+    <div id="costosmes" class="tab-pane fade">
+      
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      
+      <th>Salud</th>
+      
+      <th>Pension</th>
+      
+      <th>Rprofesional</th>
+      
+      <th>Sena</th>
+      
+      <th>Icbf</th>
+      
+      <th>Cajacompensaciontotal</th>
+      
+      <th>Total costom</th>
+     
+      <th>Totalneto</th>
+      <th>Sueldo</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @costomes.each do |costome| %>
+      <tr>
+       
+        <td><%= costome.salud %></td>
+     
+        <td><%= costome.pension %></td>
+       
+        <td><%= costome.rprofesional %></td>
+      
+        <td><%= costome.sena %></td>
+      
+        <td><costosmese.icbf %></td>
+      
+      
+     
+        <td><%= costome.total_costom %></td>
+      
+        <td><%= costome.totalneto %></td>
+        <td><%= costome.sueldo %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+    </div>
+    
+    
+     <div id="resultado" class="tab-pane fade">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Dlaborales mes</th>
+      <th>Costo dia</th>
+      <th>hora laboral</th>
+      <th>Costo hora</th>
+      <th>Costo minuto</th>
+      <th>Recargo adicional</th>
+      <th>Total minuto</th>
+      <th>Sueldo</th>
+      <th>Dlaboral</th>
+      <th>Prestacion</th>
+      <th>Costome</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resultado_costos.each do |resultado_costo| %>
+      <tr>
+        <td><%= resultado_costo.dlaborales_mes %></td>
+        <td><%= resultado_costo.costo_dia %></td>
+        <td><%= resultado_costo.hlaborales %></td>
+        <td><%= resultado_costo.costo_hora %></td>
+        <td><%= resultado_costo.costo_minuto %></td>
+        <td><%= resultado_costo.recargo_adicional %></td>
+        <td><%= resultado_costo.total_minuto %></td>
+        <td><%= resultado_costo.sueldo %></td>
+        <td><%= resultado_costo.dlaboral %></td>
+        <td><%= resultado_costo.prestacion %></td>
+        <td><%= resultado_costo.costome %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+      
+    </div>
+  </div>
+</div>
+
