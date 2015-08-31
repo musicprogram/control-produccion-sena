@@ -33,8 +33,6 @@
           <%= f.input :salario_porcentaje, class:'salario_porcentaje' %>
           <%= f.input :subsidio, class:'subsidio' %>
           <%= f.input :subsidio_procentaje, class:'subsidio_procentaje' %>
-          <%= f.input :total_sueldo, class:'total_sueldo' %>
-          <%= f.input :total_porcentaje, class:'total_porcentaje' %>
         </div>
       </div>
       
@@ -46,19 +44,31 @@
 <br>
 <div class="collapse" id="collapseExample1">
   <div class="well">
-    <%= f.input :cesantias, class:'cesantias' %>
     <%= f.input :cesantias_porcentaje, class:'cesantias_porcentaje' %>
-    <%= f.input :prima, class:'prima' %>
     <%= f.input :prima_procentaje, class:'prima_procentaje' %>
-    <%= f.input :vacaciones, class:'vacaciones' %>
     <%= f.input :vacaciones_porcentaje, class:'vacaciones_porcentaje' %>
-    <%= f.input :intereses_cesantias, class:'intereses_cesantias' %>
-    <%= f.input :total_prestacion, class:'total_prestacion' %>
-    <%= f.input :total_porcentaje, class:'total_porcentaje' %>
   </div>
 </div>  
       
       <br>
+   
+   
+  <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+    Costo Mes
+  </a>
+  <br>
+  <div class="collapse" id="collapseExample5">
+    <div class="well">
+      <%= f.input :porcenjatesalud, class:'porcenjatesalud' %>
+      <%= f.input :porcentajepension, class:'porcentajepension' %>
+      <%= f.input :porcentajerprofesional, class:'porcentajerprofesional' %>
+      <%= f.input :porcentajesena, class:'porcentajesena' %>
+      <%= f.input :porcentajeicbf, class:'porcentajeicbf' %>
+      <%= f.input :porcentajecajacompensacion, class:'porcentajecajacompensacion' %>
+    </div>
+  </div>
+    
+    <br>
    
    <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
   Días Laborales
@@ -76,32 +86,6 @@
 
 <br>
 
-  <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
-  Costo Mes
-</a>
-<br>
-<div class="collapse" id="collapseExample5">
-  <div class="well">
-<%= f.input :porcenjatesalud, class:'porcenjatesalud' %>
-    <%= f.input :salud, class:'salud' %>
-    <%= f.input :porcentajepension, class:'porcentajepension' %>
-    <%= f.input :pension, class:'pension' %>
-    <%= f.input :porcentajerprofesional, class:'porcentajerprofesional' %>
-    <%= f.input :rprofesional, class:'rprofesional' %>
-    <%= f.input :porcentajesena, class:'porcentajesena' %>
-    <%= f.input :sena, class:'sena' %>
-    <%= f.input :porcentajeicbf, class:'porcentajeicbf' %>
-    <%= f.input :icbf, class:'icbf' %>
-    <%= f.input :porcentajecajacompensacion, class:'porcentajecajacompensacion' %>
-    <%= f.input :cajacompensaciontotal, class:'cajacompensaciontotal' %>
-    <%= f.input :porcentajetotal_costom, class:'porcentajetotal_costom' %>
-    <%= f.input :total_costom, class:'total_costom' %>
-    <%= f.input :porcentajetotalneto, class:'porcentajetotalneto' %>
-    <%= f.input :totalneto, class:'totalneto' %>
-  </div>
-</div>
-    
-    <br>
     <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
   Resultado Costos
 </a>

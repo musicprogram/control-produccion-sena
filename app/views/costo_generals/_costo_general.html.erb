@@ -1,233 +1,385 @@
-<div id="costo_general_<%= costo_general.id %>">
+<div class="container">
+  <div id="costo_general_<%= costo_general.id %>">
     
     <p id="notice"><%= notice %></p>
     
-    <p>
-      <strong>Salario:</strong>
-      <%= costo_general.salario %>
-    </p>
-
+    <div class="well">
+      <div class="row">
+      
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        
     <p>
       <strong>Salario porcentaje:</strong>
       <%= costo_general.salario_porcentaje %>
     </p>
-    
     <p>
-      <strong>Subsidio:</strong>
-      <%= costo_general.subsidio %>
+      <strong>Salario:</strong>
+      <%= costo_general.salario %>
     </p>
-    
-    <p>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <p>
       <strong>Subsidio procentaje:</strong>
       <%= costo_general.subsidio_procentaje %>
     </p>
     
+     
     <p>
+      <strong>Subsidio:</strong>
+      <%= costo_general.subsidio %>
+    </p>
+      </div>
+      
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <h3>
       <strong>Total sueldo:</strong>
       <%= costo_general.total_sueldo %>
-    </p>
+    </h3>
+      </div>
     
-    <p>
-      <strong>Total porcentaje:</strong>
-      <%= costo_general.total_porcentaje %>
-    </p>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+         
+         <h3>
+          <strong>Total porcentaje:</strong>
+          <%= costo_general.total_porcentaje %>
+        </h3>
+         
+   
+      </div>
+    </div>
     
-    <p>
-      <strong>Cesantias:</strong>
-      <%= costo_general.cesantias %>
-    </p>
-    
+    </div>
+
+   <div class="well">
+     
+   <div class="row">
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
     <p>
       <strong>Cesantias porcentaje:</strong>
       <%= costo_general.cesantias_porcentaje %>
     </p>
-    
+     </div>
+     
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     
     <p>
-      <strong>Prima:</strong>
-      <%= costo_general.prima %>
+      <strong>Cesantias:</strong>
+      <%= costo_general.cesantias %>
     </p>
-    
-    <p>
+     </div>
+   </div>
+   
+   <div class="row">
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <p>
       <strong>Prima procentaje:</strong>
       <%= costo_general.prima_procentaje %>
     </p>
     
-    <p>
-      <strong>Vacaciones:</strong>
-      <%= costo_general.vacaciones %>
+     </div>
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <p>
+      <strong>Prima:</strong>
+      <%= costo_general.prima %>
     </p>
-    
-    <p>
+     </div>
+   </div>
+   
+   <div class="row">
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <p>
       <strong>Vacaciones porcentaje:</strong>
       <%= costo_general.vacaciones_porcentaje %>
     </p>
-    
-    <p>
-      <strong>Intereses cesantias:</strong>
-      <%= costo_general.intereses_cesantias %>
-    </p>
-    
-    <p>
-      <strong>Total prestacion:</strong>
-      <%= costo_general.total_prestacion %>
-    </p>
-    
-    <p>
-      <strong>Total porcentaje:</strong>
-      <%= costo_general.total_porcentaje %>
-    </p>
-    
-    <p>
-      <strong>Porcenjatesalud:</strong>
-      <%= costo_general.porcenjatesalud %>
-    </p>
-    
-    <p>
-      <strong>Salud:</strong>
-      <%= costo_general.salud %>
-    </p>
-    
-    <p>
-      <strong>Porcentajepension:</strong>
-      <%= costo_general.porcentajepension %>
-    </p>
-    
-    <p>
-      <strong>Pension:</strong>
-      <%= costo_general.pension %>
-    </p>
-    
-    <p>
-      <strong>Porcentajerprofesional:</strong>
-      <%= costo_general.porcentajerprofesional %>
-    </p>
-    
-    <p>
-      <strong>Rprofesional:</strong>
-      <%= costo_general.rprofesional %>
-    </p>
-    
-    <p>
-      <strong>Porcentajesena:</strong>
-      <%= costo_general.porcentajesena %>
-    </p>
-    
-    <p>
-      <strong>Sena:</strong>
-      <%= costo_general.sena %>
-    </p>
-    
-    <p>
-      <strong>Porcentajeicbf:</strong>
-      <%= costo_general.porcentajeicbf %>
-    </p>
-    
-    <p>
-      <strong>Icbf:</strong>
-      <%= costo_general.icbf %>
-    </p>
-    
-    <p>
-      <strong>Porcentajecajacompensacion:</strong>
-      <%= costo_general.porcentajecajacompensacion %>
-    </p>
-    
-    <p>
-      <strong>Cajacompensaciontotal:</strong>
-      <%= costo_general.cajacompensaciontotal %>
-    </p>
-    
-    <p>
-      <strong>Porcentajetotal costom:</strong>
-      <%= costo_general.porcentajetotal_costom %>
-    </p>
-    
-    <p>
-      <strong>Total costom:</strong>
-      <%= costo_general.total_costom %>
-    </p>
-    
-    <p>
-      <strong>Porcentajetotalneto:</strong>
-      <%= costo_general.porcentajetotalneto %>
-    </p>
-    
-    <p>
-      <strong>Totalneto:</strong>
-      <%= costo_general.totalneto %>
-    </p>
-    
-    <p>
-      <strong>Dias año:</strong>
-      <%= costo_general.dias_año %>
-    </p>
-    
-    <p>
-      <strong>Domingos:</strong>
-      <%= costo_general.domingos %>
-    </p>
-    
-    <p>
-      <strong>Festivos:</strong>
-      <%= costo_general.festivos %>
-    </p>
-    
+     </div>
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      
     <p>
       <strong>Vacaciones:</strong>
       <%= costo_general.vacaciones %>
     </p>
-    
-    <p>
-      <strong>Total dias:</strong>
-      <%= costo_general.total_dias %>
+     </div>
+   </div>
+   
+   <div class="row">
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <p>Falta porcentaje interes_cesantías</p>
+     </div>
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <p>
+      <strong>Intereses cesantias:</strong>
+      <%= costo_general.intereses_cesantias %>
     </p>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <h3>
+        <strong>Total porcentaje:</strong>
+        <%= costo_general.total_porcentaje %>
+      </h3>
+     </div>
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+     <h3>
+      <strong>Total prestacion:</strong>
+      <%= costo_general.total_prestacion %>
+    </h3>
+     </div>
+   </div>
+   
+   </div>
     
-    <p>
-      <strong>Dlaborales mes:</strong>
-      <%= costo_general.dlaborales_mes %>
-    </p>
     
-    <p>
-      <strong>Costo dia:</strong>
-      <%= costo_general.costo_dia %>
-    </p>
+    <div class="well">
+      <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       <p>
+          <strong>Porcenjatesalud:</strong>
+            <%= costo_general.porcenjatesalud %>
+        </p>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       
+       <p>
+        <strong>Salud:</strong>
+        <%= costo_general.salud %>
+       </p>
+        
+       </div> 
+      </div>
+       <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       
+        <p>
+          <strong>Porcentajepension:</strong>
+          <%= costo_general.porcentajepension %>
+        </p>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       <p>
+          <strong>Pension:</strong>
+          <%= costo_general.pension %>
+       </p>
+       </div> 
+      </div>
+       <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        
+        <p>
+          <strong>Porcentajerprofesional:</strong>
+          <%= costo_general.porcentajerprofesional %>
+        </p>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+          <strong>Rprofesional:</strong>
+          <%= costo_general.rprofesional %>
+        </p>
+       </div> 
+      </div>
+       <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       
+        <p>
+          <strong>Porcentajesena:</strong>
+          <%= costo_general.porcentajesena %>
+        </p>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       <p>
+        <strong>Sena:</strong>
+        <%= costo_general.sena %>
+      </p>
+       </div> 
+      </div>
+       <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+          <strong>Porcentajeicbf:</strong>
+          <%= costo_general.porcentajeicbf %>
+        </p>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       <p>
+          <strong>Icbf:</strong>
+          <%= costo_general.icbf %>
+       </p>
+       </div> 
+      </div>
+       <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       <p>
+          <strong>Porcentajecajacompensacion:</strong>
+          <%= costo_general.porcentajecajacompensacion %>
+       </p>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       <p>
+          <strong>Cajacompensaciontotal:</strong>
+          <%= costo_general.cajacompensaciontotal %>
+       </p>
+       </div> 
+      </div>
+      <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+          <strong>Porcentajetotal costom:</strong>
+          <%= costo_general.porcentajetotal_costom %>
+        </p>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        
+        <p>
+          <strong>Total costom:</strong>
+          <%= costo_general.total_costom %>
+        </p>
+       </div> 
+      </div>
+      <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       
+        <h3>
+          <strong>Porcentajetotalneto:</strong>
+          <%= costo_general.porcentajetotalneto %>
+        </h3>
+       </div> 
+       
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+       
+        <h3>
+          <strong>Totalneto:</strong>
+          <%= costo_general.totalneto %>
+        </h3>
+       </div> 
+      </div>
+    </div>
     
-    <p>
-      <strong>Hlaborales:</strong>
-      <%= costo_general.hlaborales %>
-    </p>
     
-    <p>
-      <strong>Costo hora:</strong>
-      <%= costo_general.costo_hora %>
-    </p>
+    <div class="well">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+          <strong>Dias año:</strong>
+          <%= costo_general.dias_año %>
+        </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <p>
+            <strong>Domingos:</strong>
+            <%= costo_general.domingos %>
+          </p> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+         <p>
+            <strong>Festivos:</strong>
+            <%= costo_general.festivos %>
+         </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+           <p>
+              <strong>Vacaciones:</strong>
+              <%= costo_general.vacaciones %>
+           </p> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <h3>
+            <strong>Total dias:</strong>
+            <%= costo_general.total_dias %>
+          </h3> 
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        </div>
+      </div>
+      
+    </div>
     
-    <p>
-      <strong>Costo minuto:</strong>
-      <%= costo_general.costo_minuto %>
-    </p>
     
-    <p>
-      <strong>Recargo adicional:</strong>
-      <%= costo_general.recargo_adicional %>
-    </p>
+    <div class="well">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+          <strong>Dlaborales mes:</strong>
+          <%= costo_general.dlaborales_mes %>
+        </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+           <p>
+              <strong>Costo dia:</strong>
+              <%= costo_general.costo_dia %>
+           </p> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+            <strong>Hlaborales:</strong>
+            <%= costo_general.hlaborales %>
+        </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+          <strong>Costo hora:</strong>
+          <%= costo_general.costo_hora %>
+        </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <p>
+            <strong>Costo minuto:</strong>
+            <%= costo_general.costo_minuto %>
+          </p> 
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        <p>
+            <strong>Recargo adicional:</strong>
+            <%= costo_general.recargo_adicional %>
+        </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+           <h3>
+              <strong>Total minuto:</strong>
+              <%= costo_general.total_minuto %>
+           </h3> 
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
+        </div>
+      </div>
+    </div>
     
-    <p>
-      <strong>Total minuto:</strong>
-      <%= costo_general.total_minuto %>
-    </p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+         <button type="button" class="btn btn-default btn-lg btn-block data">
+          <%= link_to 'Eliminar', costo_general, method: :delete, remote: true %>
+         </button> 
+      </div> 
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#myupdatecosto_general_<%= costo_general.id %>">
+          Editar
+        </button>
+      </div>
+    </div>
     
-    <button type="button" class="btn btn-danger btn-lg data">
-      <%= link_to 'Eliminar', costo_general, method: :delete, remote: true %>
-    </button>  
     
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myupdatecosto_general_<%= costo_general.id %>">
-      Editar
-    </button>
     
-<!-- Modal -->
-
     <%= simple_form_for(costo_general, :method => :put, remote: true  ) do |f| %>
       <div class="modal fade" id="myupdatecosto_general_<%= costo_general.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -296,4 +448,6 @@
         </div>
       </div>
     <% end %>  
+</div>
+
 </div>
