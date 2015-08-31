@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  resources :resultado_costos
-  resources :prestaciones
-  resources :costomes
-  resources :sueldos
-  resources :dlaborals
+  resources :costo_generals
   resources :costo_fijos
   resources :moperaciones
   resources :omaquinas

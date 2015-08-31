@@ -10,6 +10,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
     inflect.irregular 'proveedor', 'proveedores'
     inflect.irregular 'moperacion', 'moperaciones'
     inflect.irregular 'prestacion', 'prestaciones'
+   
 #   inflect.uncountable %w( fish sheep )
 end
 

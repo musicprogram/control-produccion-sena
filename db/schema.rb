@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828140009) do
+ActiveRecord::Schema.define(version: 20150831161631) do
 
   create_table "ayudas", force: :cascade do |t|
     t.string   "nombre"
@@ -86,7 +86,21 @@ ActiveRecord::Schema.define(version: 20150828140009) do
     t.datetime "updated_at",            null: false
   end
 
-  create_table "costomes", force: :cascade do |t|
+  create_table "costo_generals", force: :cascade do |t|
+    t.float    "salario"
+    t.float    "salario_porcentaje"
+    t.float    "subsidio"
+    t.float    "subsidio_procentaje"
+    t.float    "total_sueldo"
+    t.float    "total_porcentaje"
+    t.float    "cesantias"
+    t.float    "cesantias_porcentaje"
+    t.float    "prima"
+    t.float    "prima_procentaje"
+    t.float    "vacaciones"
+    t.float    "vacaciones_porcentaje"
+    t.float    "intereses_cesantias"
+    t.float    "total_prestacion"
     t.float    "porcenjatesalud"
     t.float    "salud"
     t.float    "porcentajepension"
@@ -103,22 +117,19 @@ ActiveRecord::Schema.define(version: 20150828140009) do
     t.float    "total_costom"
     t.float    "porcentajetotalneto"
     t.float    "totalneto"
-    t.integer  "sueldo_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.integer  "prestacion_id"
-  end
-
-  add_index "costomes", ["sueldo_id"], name: "index_costomes_on_sueldo_id"
-
-  create_table "dlaborals", force: :cascade do |t|
     t.float    "dias_año"
     t.float    "domingos"
     t.float    "festivos"
-    t.float    "vacaciones"
     t.float    "total_dias"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.float    "dlaborales_mes"
+    t.float    "costo_dia"
+    t.integer  "hlaborales"
+    t.float    "costo_hora"
+    t.float    "costo_minuto"
+    t.float    "recargo_adicional"
+    t.float    "total_minuto"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "documentos", force: :cascade do |t|
@@ -430,22 +441,6 @@ ActiveRecord::Schema.define(version: 20150828140009) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "prestaciones", force: :cascade do |t|
-    t.integer  "cesantias"
-    t.integer  "cesantias_porcentaje"
-    t.integer  "prima"
-    t.integer  "prima_procentaje"
-    t.integer  "vacaciones"
-    t.integer  "vacaciones_porcentaje"
-    t.integer  "intereses_cesantias"
-    t.integer  "intereses_porcenjate"
-    t.integer  "total_prestacion"
-    t.integer  "total_porcentaje"
-    t.integer  "sueldo_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
   create_table "procesoexts", force: :cascade do |t|
     t.string   "nombre"
     t.datetime "created_at", null: false
@@ -495,22 +490,6 @@ ActiveRecord::Schema.define(version: 20150828140009) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "resultado_costos", force: :cascade do |t|
-    t.float    "dlaborales_mes"
-    t.float    "costo_dia"
-    t.float    "costo_hora"
-    t.float    "costo_minuto"
-    t.float    "recargo_adicional"
-    t.float    "total_minuto"
-    t.integer  "sueldo_id"
-    t.integer  "dlaboral_id"
-    t.integer  "prestacion_id"
-    t.integer  "costome_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.integer  "hlaborales"
-  end
-
   create_table "resultbalances", force: :cascade do |t|
     t.integer  "balance_id"
     t.integer  "operario"
@@ -524,17 +503,6 @@ ActiveRecord::Schema.define(version: 20150828140009) do
 
   add_index "resultbalances", ["balance_id"], name: "index_resultbalances_on_balance_id"
   add_index "resultbalances", ["operacion_maquina_id"], name: "index_resultbalances_on_operacion_maquina_id"
-
-  create_table "sueldos", force: :cascade do |t|
-    t.integer  "salario"
-    t.integer  "salario_porcentaje"
-    t.integer  "subsidio"
-    t.integer  "subsidio_procentaje"
-    t.integer  "total_sueldo"
-    t.integer  "total_porcentaje"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
 
   create_table "tallas", force: :cascade do |t|
     t.string   "titulo"

@@ -1,0 +1,4 @@
+json.array!(@costo_generals) do |costo_general|
+  json.extract! costo_general, :id, :salario, :salario_porcentaje, :subsidio, :subsidio_procentaje, :total_sueldo, :total_porcentaje, :cesantias, :cesantias_porcentaje, :prima, :prima_procentaje, :vacaciones, :vacaciones_porcentaje, :intereses_cesantias, :total_prestacion, :total_porcentaje, :porcenjatesalud, :salud, :porcentajepension, :pension, :porcentajerprofesional, :rprofesional, :porcentajesena, :sena, :porcentajeicbf, :icbf, :porcentajecajacompensacion, :cajacompensaciontotal, :porcentajetotal_costom, :total_costom, :porcentajetotalneto, :totalneto, :dias_año, :domingos, :festivos, :vacaciones, :total_dias, :dlaborales_mes, :costo_dia, :hlaborales, :costo_hora, :costo_minuto, :recargo_adicional, :total_minuto
+  json.url costo_general_url(costo_general, format: :json)
+end

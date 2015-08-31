@@ -1,0 +1,5 @@
+$("#myupdatecosto_general_<%= @costo_general.id %>").modal('hide');
+$("#costo_general_<%= @costo_general.id %>").fadeOut(500, function(){
+    $(this).remove();
+    $("#container_costos").prepend('<%= j render @costo_general %>');
+});

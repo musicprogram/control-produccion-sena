@@ -1,0 +1,2 @@
+module CostoGeneralsHelper
+end

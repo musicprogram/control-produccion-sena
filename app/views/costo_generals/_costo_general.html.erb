@@ -1,0 +1,299 @@
+<div id="costo_general_<%= costo_general.id %>">
+    
+    <p id="notice"><%= notice %></p>
+    
+    <p>
+      <strong>Salario:</strong>
+      <%= costo_general.salario %>
+    </p>
+
+    <p>
+      <strong>Salario porcentaje:</strong>
+      <%= costo_general.salario_porcentaje %>
+    </p>
+    
+    <p>
+      <strong>Subsidio:</strong>
+      <%= costo_general.subsidio %>
+    </p>
+    
+    <p>
+      <strong>Subsidio procentaje:</strong>
+      <%= costo_general.subsidio_procentaje %>
+    </p>
+    
+    <p>
+      <strong>Total sueldo:</strong>
+      <%= costo_general.total_sueldo %>
+    </p>
+    
+    <p>
+      <strong>Total porcentaje:</strong>
+      <%= costo_general.total_porcentaje %>
+    </p>
+    
+    <p>
+      <strong>Cesantias:</strong>
+      <%= costo_general.cesantias %>
+    </p>
+    
+    <p>
+      <strong>Cesantias porcentaje:</strong>
+      <%= costo_general.cesantias_porcentaje %>
+    </p>
+    
+    <p>
+      <strong>Prima:</strong>
+      <%= costo_general.prima %>
+    </p>
+    
+    <p>
+      <strong>Prima procentaje:</strong>
+      <%= costo_general.prima_procentaje %>
+    </p>
+    
+    <p>
+      <strong>Vacaciones:</strong>
+      <%= costo_general.vacaciones %>
+    </p>
+    
+    <p>
+      <strong>Vacaciones porcentaje:</strong>
+      <%= costo_general.vacaciones_porcentaje %>
+    </p>
+    
+    <p>
+      <strong>Intereses cesantias:</strong>
+      <%= costo_general.intereses_cesantias %>
+    </p>
+    
+    <p>
+      <strong>Total prestacion:</strong>
+      <%= costo_general.total_prestacion %>
+    </p>
+    
+    <p>
+      <strong>Total porcentaje:</strong>
+      <%= costo_general.total_porcentaje %>
+    </p>
+    
+    <p>
+      <strong>Porcenjatesalud:</strong>
+      <%= costo_general.porcenjatesalud %>
+    </p>
+    
+    <p>
+      <strong>Salud:</strong>
+      <%= costo_general.salud %>
+    </p>
+    
+    <p>
+      <strong>Porcentajepension:</strong>
+      <%= costo_general.porcentajepension %>
+    </p>
+    
+    <p>
+      <strong>Pension:</strong>
+      <%= costo_general.pension %>
+    </p>
+    
+    <p>
+      <strong>Porcentajerprofesional:</strong>
+      <%= costo_general.porcentajerprofesional %>
+    </p>
+    
+    <p>
+      <strong>Rprofesional:</strong>
+      <%= costo_general.rprofesional %>
+    </p>
+    
+    <p>
+      <strong>Porcentajesena:</strong>
+      <%= costo_general.porcentajesena %>
+    </p>
+    
+    <p>
+      <strong>Sena:</strong>
+      <%= costo_general.sena %>
+    </p>
+    
+    <p>
+      <strong>Porcentajeicbf:</strong>
+      <%= costo_general.porcentajeicbf %>
+    </p>
+    
+    <p>
+      <strong>Icbf:</strong>
+      <%= costo_general.icbf %>
+    </p>
+    
+    <p>
+      <strong>Porcentajecajacompensacion:</strong>
+      <%= costo_general.porcentajecajacompensacion %>
+    </p>
+    
+    <p>
+      <strong>Cajacompensaciontotal:</strong>
+      <%= costo_general.cajacompensaciontotal %>
+    </p>
+    
+    <p>
+      <strong>Porcentajetotal costom:</strong>
+      <%= costo_general.porcentajetotal_costom %>
+    </p>
+    
+    <p>
+      <strong>Total costom:</strong>
+      <%= costo_general.total_costom %>
+    </p>
+    
+    <p>
+      <strong>Porcentajetotalneto:</strong>
+      <%= costo_general.porcentajetotalneto %>
+    </p>
+    
+    <p>
+      <strong>Totalneto:</strong>
+      <%= costo_general.totalneto %>
+    </p>
+    
+    <p>
+      <strong>Dias año:</strong>
+      <%= costo_general.dias_año %>
+    </p>
+    
+    <p>
+      <strong>Domingos:</strong>
+      <%= costo_general.domingos %>
+    </p>
+    
+    <p>
+      <strong>Festivos:</strong>
+      <%= costo_general.festivos %>
+    </p>
+    
+    <p>
+      <strong>Vacaciones:</strong>
+      <%= costo_general.vacaciones %>
+    </p>
+    
+    <p>
+      <strong>Total dias:</strong>
+      <%= costo_general.total_dias %>
+    </p>
+    
+    <p>
+      <strong>Dlaborales mes:</strong>
+      <%= costo_general.dlaborales_mes %>
+    </p>
+    
+    <p>
+      <strong>Costo dia:</strong>
+      <%= costo_general.costo_dia %>
+    </p>
+    
+    <p>
+      <strong>Hlaborales:</strong>
+      <%= costo_general.hlaborales %>
+    </p>
+    
+    <p>
+      <strong>Costo hora:</strong>
+      <%= costo_general.costo_hora %>
+    </p>
+    
+    <p>
+      <strong>Costo minuto:</strong>
+      <%= costo_general.costo_minuto %>
+    </p>
+    
+    <p>
+      <strong>Recargo adicional:</strong>
+      <%= costo_general.recargo_adicional %>
+    </p>
+    
+    <p>
+      <strong>Total minuto:</strong>
+      <%= costo_general.total_minuto %>
+    </p>
+    
+    <button type="button" class="btn btn-danger btn-lg data">
+      <%= link_to 'Eliminar', costo_general, method: :delete, remote: true %>
+    </button>  
+    
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myupdatecosto_general_<%= costo_general.id %>">
+      Editar
+    </button>
+    
+<!-- Modal -->
+
+    <%= simple_form_for(costo_general, :method => :put, remote: true  ) do |f| %>
+      <div class="modal fade" id="myupdatecosto_general_<%= costo_general.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+      
+              <div class="form-inputs">
+                <%= f.input :salario, class: 'form-control costo_general_salario' %>
+                <%= f.input :salario_porcentaje %>
+                <%= f.input :subsidio %>
+                <%= f.input :subsidio_procentaje %>
+                <%= f.input :total_sueldo %>
+                <%= f.input :total_porcentaje %>
+                <%= f.input :cesantias %>
+                <%= f.input :cesantias_porcentaje %>
+                <%= f.input :prima %>
+                <%= f.input :prima_procentaje %>
+                <%= f.input :vacaciones %>
+                <%= f.input :vacaciones_porcentaje %>
+                <%= f.input :intereses_cesantias %>
+                <%= f.input :total_prestacion %>
+                <%= f.input :total_porcentaje %>
+                <%= f.input :porcenjatesalud %>
+                <%= f.input :salud %>
+                <%= f.input :porcentajepension %>
+                <%= f.input :pension %>
+                <%= f.input :porcentajerprofesional %>
+                <%= f.input :rprofesional %>
+                <%= f.input :porcentajesena %>
+                <%= f.input :sena %>
+                <%= f.input :porcentajeicbf %>
+                <%= f.input :icbf %>
+                <%= f.input :porcentajecajacompensacion %>
+                <%= f.input :cajacompensaciontotal %>
+                <%= f.input :porcentajetotal_costom %>
+                <%= f.input :total_costom %>
+                <%= f.input :porcentajetotalneto %>
+                <%= f.input :totalneto %>
+                <%= f.input :dias_año %>
+                <%= f.input :domingos %>
+                <%= f.input :festivos %>
+                <%= f.input :vacaciones %>
+                <%= f.input :total_dias %>
+                <%= f.input :dlaborales_mes %>
+                <%= f.input :costo_dia %>
+                <%= f.input :hlaborales %>
+                <%= f.input :costo_hora %>
+                <%= f.input :costo_minuto %>
+                <%= f.input :recargo_adicional %>
+                <%= f.input :total_minuto %>
+              </div>
+      
+              <div class="form-actions">
+                <%= f.button :submit %>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>  
+</div>

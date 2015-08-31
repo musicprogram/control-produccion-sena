@@ -1,1 +1,0 @@
-json.extract! @resultado_costo, :id, :dlaborales_mes, :costo_dia, :costo_hora, :costo_minuto, :recargo_adicional, :total_minuto, :sueldo_id, :dlaboral_id, :prestacion_id, :costome_id, :created_at, :updated_at

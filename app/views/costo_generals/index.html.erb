@@ -1,0 +1,80 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+Costos
+</button>
+
+<div class="row" id="container_costos">
+  <%= render @costo_generals %>
+</div>
+
+
+<!-- Modal -->
+<%= simple_form_for(@costo_general, remote: true) do |f| %>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="myModalLabel">Costos Generales</h4>
+    </div>
+    <div class="modal-body">
+      
+      
+    <%= f.input :salario, class:'costo_general_salario' %>
+    <%= f.input :salario_porcentaje, class:'salario_porcentaje' %>
+    <%= f.input :subsidio, class:'subsidio' %>
+    <%= f.input :subsidio_procentaje, class:'subsidio_procentaje' %>
+    <%= f.input :total_sueldo, class:'total_sueldo' %>
+    <%= f.input :total_porcentaje, class:'total_porcentaje' %>
+    <%= f.input :cesantias, class:'cesantias' %>
+    <%= f.input :cesantias_porcentaje, class:'cesantias_porcentaje' %>
+    <%= f.input :prima, class:'prima' %>
+    <%= f.input :prima_procentaje, class:'prima_procentaje' %>
+    <%= f.input :vacaciones, class:'vacaciones' %>
+    <%= f.input :vacaciones_porcentaje, class:'vacaciones_porcentaje' %>
+    <%= f.input :intereses_cesantias, class:'intereses_cesantias' %>
+    <%= f.input :total_prestacion, class:'total_prestacion' %>
+    <%= f.input :total_porcentaje, class:'total_porcentaje' %>
+    <%= f.input :porcenjatesalud, class:'porcenjatesalud' %>
+    <%= f.input :salud, class:'salud' %>
+    <%= f.input :porcentajepension, class:'porcentajepension' %>
+    <%= f.input :pension, class:'pension' %>
+    <%= f.input :porcentajerprofesional, class:'porcentajerprofesional' %>
+    <%= f.input :rprofesional, class:'rprofesional' %>
+    <%= f.input :porcentajesena, class:'porcentajesena' %>
+    <%= f.input :sena, class:'sena' %>
+    <%= f.input :porcentajeicbf, class:'porcentajeicbf' %>
+    <%= f.input :icbf, class:'icbf' %>
+    <%= f.input :porcentajecajacompensacion, class:'porcentajecajacompensacion' %>
+    <%= f.input :cajacompensaciontotal, class:'cajacompensaciontotal' %>
+    <%= f.input :porcentajetotal_costom, class:'porcentajetotal_costom' %>
+    <%= f.input :total_costom, class:'total_costom' %>
+    <%= f.input :porcentajetotalneto, class:'porcentajetotalneto' %>
+    <%= f.input :totalneto, class:'totalneto' %>
+    <%= f.input :dias_año, class:'dias_año' %>
+    <%= f.input :domingos, class:'domingos' %>
+    <%= f.input :festivos, class:'festivos' %>
+    <%= f.input :vacaciones, class:'vacaciones' %>
+    <%= f.input :total_dias, class:'total_dias' %>
+    <%= f.input :dlaborales_mes, class:'dlaborales_mes' %>
+    <%= f.input :costo_dia, class:'costo_dia' %>
+    <%= f.input :hlaborales, class:'hlaborales' %>
+    <%= f.input :costo_hora, class:'costo_hora' %>
+    <%= f.input :costo_minuto, class:'costo_minuto' %>
+    <%= f.input :recargo_adicional, class:'recargo_adicional' %>
+    <%= f.input :total_minuto, class:'total_minuto' %>  
+      
+      
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary"><%= f.submit %></button>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>
+
+
+
+
