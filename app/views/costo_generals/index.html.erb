@@ -1,7 +1,9 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-Costos
+<h3 class="centrar">
+  <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
+<%= image_tag("costos.png") %>
 </button>
+</h3>
 
 <div class="row" id="container_costos">
   <%= render @costo_generals %>
@@ -16,17 +18,34 @@ Costos
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title" id="myModalLabel">Costos Generales</h4>
+      <h4 class="modal-title centrar" id="myModalLabel">Costos Generales</h4>
     </div>
     <div class="modal-body">
+    
+      <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Sueldo
+      </a>
+      <br>
+      
+      <div class="collapse" id="collapseExample">
+        <div class="well">
+          <%= f.input :salario, class:'costo_general_salario' %>
+          <%= f.input :salario_porcentaje, class:'salario_porcentaje' %>
+          <%= f.input :subsidio, class:'subsidio' %>
+          <%= f.input :subsidio_procentaje, class:'subsidio_procentaje' %>
+          <%= f.input :total_sueldo, class:'total_sueldo' %>
+          <%= f.input :total_porcentaje, class:'total_porcentaje' %>
+        </div>
+      </div>
       
       
-    <%= f.input :salario, class:'costo_general_salario' %>
-    <%= f.input :salario_porcentaje, class:'salario_porcentaje' %>
-    <%= f.input :subsidio, class:'subsidio' %>
-    <%= f.input :subsidio_procentaje, class:'subsidio_procentaje' %>
-    <%= f.input :total_sueldo, class:'total_sueldo' %>
-    <%= f.input :total_porcentaje, class:'total_porcentaje' %>
+      <br>
+    <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+  Prestaciones
+</a>
+<br>
+<div class="collapse" id="collapseExample1">
+  <div class="well">
     <%= f.input :cesantias, class:'cesantias' %>
     <%= f.input :cesantias_porcentaje, class:'cesantias_porcentaje' %>
     <%= f.input :prima, class:'prima' %>
@@ -36,7 +55,34 @@ Costos
     <%= f.input :intereses_cesantias, class:'intereses_cesantias' %>
     <%= f.input :total_prestacion, class:'total_prestacion' %>
     <%= f.input :total_porcentaje, class:'total_porcentaje' %>
-    <%= f.input :porcenjatesalud, class:'porcenjatesalud' %>
+  </div>
+</div>  
+      
+      <br>
+   
+   <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+  Días Laborales
+</a>
+<br>
+<div class="collapse" id="collapseExample3">
+  <div class="well">
+   <%= f.input :dias_año, class:'dias_año' %>
+    <%= f.input :domingos, class:'domingos' %>
+    <%= f.input :festivos, class:'festivos' %>
+    <%= f.input :vacaciones, class:'vacaciones' %>
+    <%= f.input :total_dias, class:'total_dias' %>
+  </div>
+</div>
+
+<br>
+
+  <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+  Costo Mes
+</a>
+<br>
+<div class="collapse" id="collapseExample5">
+  <div class="well">
+<%= f.input :porcenjatesalud, class:'porcenjatesalud' %>
     <%= f.input :salud, class:'salud' %>
     <%= f.input :porcentajepension, class:'porcentajepension' %>
     <%= f.input :pension, class:'pension' %>
@@ -52,11 +98,17 @@ Costos
     <%= f.input :total_costom, class:'total_costom' %>
     <%= f.input :porcentajetotalneto, class:'porcentajetotalneto' %>
     <%= f.input :totalneto, class:'totalneto' %>
-    <%= f.input :dias_año, class:'dias_año' %>
-    <%= f.input :domingos, class:'domingos' %>
-    <%= f.input :festivos, class:'festivos' %>
-    <%= f.input :vacaciones, class:'vacaciones' %>
-    <%= f.input :total_dias, class:'total_dias' %>
+  </div>
+</div>
+    
+    <br>
+    <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+  Resultado Costos
+</a>
+<br></br>
+<div class="collapse" id="collapseExample4">
+  <div class="well">
+    
     <%= f.input :dlaborales_mes, class:'dlaborales_mes' %>
     <%= f.input :costo_dia, class:'costo_dia' %>
     <%= f.input :hlaborales, class:'hlaborales' %>
@@ -64,17 +116,18 @@ Costos
     <%= f.input :costo_minuto, class:'costo_minuto' %>
     <%= f.input :recargo_adicional, class:'recargo_adicional' %>
     <%= f.input :total_minuto, class:'total_minuto' %>  
+  </div>
+</div>
       
       
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-primary"><%= f.submit %></button>
+      <%= f.submit "Guardar", class:'btn btn-primary btn-lg btn-block' %>
     </div>
   </div>
 </div>
 </div>
 <% end %>
-
 
 
 
