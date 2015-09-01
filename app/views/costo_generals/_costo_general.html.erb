@@ -107,7 +107,7 @@
    
    <div class="row">
      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-     <p>Falta porcentaje interes_cesantías</p>
+     <p><%= costo_general.interes_porcentaje %></p>
      </div>
      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
      <p>
@@ -120,7 +120,7 @@
      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <h3>
         <strong>Total porcentaje:</strong>
-        <%= costo_general.total_porcentaje %>
+        <%= costo_general.total_porcentaje_pres %>
       </h3>
      </div>
      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -291,7 +291,7 @@
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
            <p>
               <strong>Vacaciones:</strong>
-              <%= costo_general.vacaciones %>
+              <%= costo_general.vacaciones_trabajador %>
            </p> 
         </div>
       </div>
@@ -386,64 +386,90 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              <h4 class="modal-title centrar" id="myModalLabel">Edición Costos</h4>
             </div>
             <div class="modal-body">
       
-              <div class="form-inputs">
-                <%= f.input :salario, class: 'form-control costo_general_salario' %>
-                <%= f.input :salario_porcentaje %>
-                <%= f.input :subsidio %>
-                <%= f.input :subsidio_procentaje %>
-                <%= f.input :total_sueldo %>
-                <%= f.input :total_porcentaje %>
-                <%= f.input :cesantias %>
-                <%= f.input :cesantias_porcentaje %>
-                <%= f.input :prima %>
-                <%= f.input :prima_procentaje %>
-                <%= f.input :vacaciones %>
-                <%= f.input :vacaciones_porcentaje %>
-                <%= f.input :intereses_cesantias %>
-                <%= f.input :total_prestacion %>
-                <%= f.input :total_porcentaje %>
-                <%= f.input :porcenjatesalud %>
-                <%= f.input :salud %>
-                <%= f.input :porcentajepension %>
-                <%= f.input :pension %>
-                <%= f.input :porcentajerprofesional %>
-                <%= f.input :rprofesional %>
-                <%= f.input :porcentajesena %>
-                <%= f.input :sena %>
-                <%= f.input :porcentajeicbf %>
-                <%= f.input :icbf %>
-                <%= f.input :porcentajecajacompensacion %>
-                <%= f.input :cajacompensaciontotal %>
-                <%= f.input :porcentajetotal_costom %>
-                <%= f.input :total_costom %>
-                <%= f.input :porcentajetotalneto %>
-                <%= f.input :totalneto %>
-                <%= f.input :dias_año %>
-                <%= f.input :domingos %>
-                <%= f.input :festivos %>
-                <%= f.input :vacaciones %>
-                <%= f.input :total_dias %>
-                <%= f.input :dlaborales_mes %>
-                <%= f.input :costo_dia %>
-                <%= f.input :hlaborales %>
-                <%= f.input :costo_hora %>
-                <%= f.input :costo_minuto %>
-                <%= f.input :recargo_adicional %>
-                <%= f.input :total_minuto %>
-              </div>
+              <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Sueldo
+      </a>
+      <br>
+      
+      <div class="collapse" id="collapseExample">
+        <div class="well">
+          <%= f.input :salario, class:'' %>
+          <%= f.input :salario_porcentaje, class:'' %>
+          <%= f.input :subsidio, class:'' %>
+          <%= f.input :subsidio_procentaje, class:'' %>
+        </div>
+      </div>
+      
+      
+      <br>
+    <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+  Prestaciones
+</a>
+<br>
+<div class="collapse" id="collapseExample1">
+  <div class="well">
+    <%= f.input :cesantias_porcentaje, class:'' %>
+    <%= f.input :prima_procentaje, class:'' %>
+    <%= f.input :vacaciones_porcentaje, class:'' %>
+    <%= f.input :interes_porcentaje, class:'' %>
+  </div>
+</div>  
+      
+      <br>
+   
+   
+  <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+    Costo Mes
+  </a>
+  <br>
+  <div class="collapse" id="collapseExample5">
+    <div class="well">
+      <%= f.input :porcenjatesalud, class:'' %>
+      <%= f.input :porcentajepension, class:'' %>
+      <%= f.input :porcentajerprofesional, class:'' %>
+      <%= f.input :porcentajesena, class:'' %>
+      <%= f.input :porcentajeicbf, class:'' %>
+      <%= f.input :porcentajecajacompensacion, class:'' %>
+    </div>
+  </div>
+    
+    <br>
+   
+   <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+  Días Laborales
+</a>
+<br>
+<div class="collapse" id="collapseExample3">
+  <div class="well">
+    <%= f.input :dias_año, class:'' %>
+    <%= f.input :domingos, class:'' %>
+    <%= f.input :festivos, class:'' %>
+    <%= f.input :vacaciones_trabajador, class:'' %>
+  </div>
+</div>
+
+<br>
+
+    <a class="btn btn-default btn-lg btn-block" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+  Resultado Costos
+</a>
+<br></br>
+<div class="collapse" id="collapseExample4">
+  <div class="well">
+    <%= f.input :hlaborales, class:'' %>
+  </div>
+</div>
+      
       
               <div class="form-actions">
-                <%= f.button :submit %>
+                <%= f.button :submit, class:'btn btn-default btn-lg btn-block' %>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+           
           </div>
         </div>
       </div>

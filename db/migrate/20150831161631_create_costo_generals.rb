@@ -15,8 +15,9 @@ class CreateCostoGenerals < ActiveRecord::Migration
       t.float :vacaciones_porcentaje
       t.float :intereses_cesantias
       t.float :total_prestacion
-      t.float :total_porcentaje
+      t.float :total_porcentaje_pres
       t.float :porcenjatesalud
+      t.float :interes_porcentaje
       t.float :salud
       t.float :porcentajepension
       t.float :pension
@@ -44,6 +45,7 @@ class CreateCostoGenerals < ActiveRecord::Migration
       t.float :costo_minuto
       t.float :recargo_adicional
       t.float :total_minuto
+      t.float :vacaciones_trabajador
 
       t.timestamps null: false
     end
